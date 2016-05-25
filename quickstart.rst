@@ -162,7 +162,7 @@ it to Anaconda Cloud:
 ::
 
     conda env export -n my-environment -f my-environment.yml
-    conda env upload -f my-environment
+    conda env upload -f my-environment.yml
 
 A list of your uploaded environments is at:
 
@@ -174,6 +174,6 @@ Anyone can download and install your environment from Anaconda Cloud:
 
 ::
 
-    conda env create user/my-environemnt
+    conda env create user/my-environment
     source activate my-environment
 
