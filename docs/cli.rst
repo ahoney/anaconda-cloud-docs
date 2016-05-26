@@ -1,3 +1,7 @@
+=================
+Command Reference
+=================
+
 Anaconda client is the command line interface (CLI) to Anaconda Cloud,
 and can be used for logging in, logging out, managing your account,
 uploading files, generating access tokens, viewing tokens, and other
@@ -10,8 +14,9 @@ The full command reference is shown below.
 `  <#Anaconda>`__
 
 anaconda
- Anaconda Cloud command line manager
-------------------------------------
+--------
+
+Anaconda Cloud command line manager
 
 **optional arguments:**
 
@@ -24,14 +29,19 @@ anaconda
 
 --show-traceback
     Show the full traceback for chalmers user errors (default: tty)
+
 --hide-traceback
     Hide the full traceback for chalmers user errors
--v / --verbose
+
+--verbose / -v
     print debug information ot the console
--q / --quiet
+
+--quiet / -q
     Only show warnings or errors the console
+
 --color
     always display with colors
+
 --no-color
     never display with colors
 
@@ -86,8 +96,9 @@ Authentication
 `  <#Auth>`__
 
 auth
+^^^^
+
 Manage Authorization Tokens
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **optional arguments:**
 
@@ -104,18 +115,26 @@ Manage Authorization Tokens
 These arguments are only valid with the ``--create`` action
 
 --strength STRENGTH
+    Create a token with STRENGTH of "strong" or "weak"
+
 --strong
     Create a longer token (default)
--w / --weak
+
+--weak / -w
     Create a shorter token
+
 --url URL
     The url of the application that will use this token
+
 --max-age MAX\_AGE
     The maximum age in seconds that this token will be valid for
--s / --scopes
+
+--scopes / -s
     Scopes for token. For example if you want to limit this token to
     conda downloads only you would use --scopes "repo conda:download"
+
 --out OUT
+    Output file
 
 **actions:**
 
@@ -139,25 +158,32 @@ See also:
 
 `  <#Login>`__
 
-| login
-|  Authenticate a user
+login
+^^^^^
+
+Authenticate a user
 
 **optional arguments:**
 
--h / --help
+--help / -h
     show this help message and exit
+
 --hostname HOSTNAME
-    Specify the host name of this login, this should be unique (default:
-    ASUSN)
+    Specify the host name of this login, this should be unique
+    (default: ASUSN)
+
 --username LOGIN\_USERNAME
     Specify your username. If this is not given, you will be prompted
+
 --password LOGIN\_PASSWORD
     Specify your password. If this is not given, you will be prompted
 
 `  <#Whoami>`__
 
-| whoami
-|  Print the information of the current user
+whoami
+^^^^^^
+
+Print the information of the current user
 
 **optional arguments:**
 
@@ -172,8 +198,9 @@ Informational
 `  <#Show>`__
 
 show
+^^^^
+
 Show information about an object
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **positional arguments:**
 
@@ -198,8 +225,10 @@ Examples:
 
 `  <#Search>`__
 
-| search
-| Search Anaconda Cloud
+search
+^^^^^^
+
+Search Anaconda Cloud
 
 **positional arguments:**
 
@@ -217,13 +246,16 @@ Search Anaconda Cloud for packages
 
 `  <#Config>`__
 
-| config
-| Binstar configuration
+config
+^^^^^^
+
+Binstar configuration
 
 **optional arguments:**
 
--h / --help
+--help / -h
     show this help message and exit
+
 --type TYPE
     The type of the values in the set commands
 
@@ -231,13 +263,17 @@ Search Anaconda Cloud for packages
 
 --set [u'name', u'value']
     sets a new variable: name value
+
 --get name
     get value: name
+
 --remove
     removes a variable
+
 --show
     show all variables
--f / --files
+
+--files / -f
     show the config file names
 
 **location:**
@@ -334,8 +370,9 @@ Managing Packages
 `  <#Package>`__
 
 package
- Anaconda Cloud package utilities
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^
+
+Anaconda Cloud package utilities
 
 **positional arguments:**
 
@@ -360,8 +397,10 @@ package
 
 --summary SUMMARY
     Set the package short summary
+
 --license LICENSE
     Set the package license
+
 --license-url LICENSE\_URL
     Set the package license url
 
@@ -376,8 +415,10 @@ package
 
 `  <#Upload>`__
 
-| upload
-| Upload packages to Anaconda Cloud
+upload
+^^^^^^
+
+Upload packages to Anaconda Cloud
 
 **positional arguments:**
 
@@ -386,44 +427,59 @@ package
 
 **optional arguments:**
 
--h / --help
+--help / -h
     show this help message and exit
--c / --channel CHANNELS
+
+--channel / -c CHANNELS
     [DEPRECATED] Add this file to a specific channel. Warning: if the
     file channels do not include "main",the file will not show up in
     your user channel
--l / --label
+
+--label / -l
     Add this file to a specific label. Warning: if the file labels do
     not include "main",the file will not show up in your user label
+
 --no-progress
     Don't show upload progress
--u / --user USER
+
+--user / -u USER
     User account, defaults to the current user
+
 --no-register
     Don't create a new package namespace if it does not exist
+
 --register
     Create a new package namespace if it does not exist
+
 --build-id BUILD\_ID
     Anaconda Cloud Build ID (internal only)
--i / --interactive
+
+--interactive / -i
     Run an interactive prompt if any packages are missing
--f / --fail
+
+--fail / -f
     Fail if a package or release does not exist (default)
+
 --force
     Force a package upload regardless of errors
 
 **metadata options:**
 
--p / --package PACKAGE
+--package / -p PACKAGE
     Defaults to the package name in the uploaded file
--v / --version VERSION
+
+--version / -v VERSION
     Defaults to the package version in the uploaded file
--s / --summary SUMMARY
+
+--summary / -s SUMMARY
     Set the summary of the package
--t / --package-type PACKAGE\_TYPE
+
+--package-type / -t PACKAGE\_TYPE
     Set the package type, defaults to autodetect
--d / --description DESCRIPTION
+
+--description / -d DESCRIPTION
     description of the file(s)
+
 --thumbnail THUMBNAIL
     Notebook's thumbnail image
 
@@ -443,31 +499,43 @@ See Also
 
 `  <#Label>`__
 
-| label
-|  Manage your Anaconda Cloud channels
+label
+^^^^^
+
+Manage your Anaconda Cloud channels
 
 **optional arguments:**
 
--h / --help
+--help / -h
     show this help message and exit
--o / --organization ORGANIZATION
+
+--organization / -o ORGANIZATION
     Manage an organizations labels
---copy LABEL
+
+--copy LABEL LABEL
+    Copy a label
+
 --list
     list all labels for a user
+
 --show LABEL
     Show all of the files in a label
+
 --lock LABEL
     Lock a label
+
 --unlock LABEL
     Unlock a label
+
 --remove LABEL
     Remove a label
 
 `  <#Copy>`__
 
-| copy
-|  Copy packages from one account to another
+copy
+^^^^
+
+Copy packages from one account to another
 
 **positional arguments:**
 
@@ -534,4 +602,3 @@ worker
 
 docker-worker
 ^^^^^^^^^^^^^
-

@@ -1,3 +1,7 @@
+==========
+Quickstart
+==========
+
 `  <#FindDownloadAndInstallPackages>`__
 
 Find, download and install packages
@@ -33,9 +37,11 @@ You can filter search results using three filter controls:
    in)
 -  Platforms: All, Source, Linux-32, Linux-64, Noarch, OSX-64, Win-32,
    Win-64.
-    "Source" packages are source code only, not yet built for any
-   specific platform.
-    "Noarch" packages are built to work on all platforms.
+
+"Source" packages are source code only, not yet built for any
+specific platform.
+
+"Noarch" packages are built to work on all platforms.
 
 `  <#DownloadAndInstallAPackageFromAnacondaCloud>`__
 
@@ -176,4 +182,3 @@ Anyone can download and install your environment from Anaconda Cloud:
 
     conda env create user/my-environment
     source activate my-environment
-

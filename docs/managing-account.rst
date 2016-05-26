@@ -1,3 +1,7 @@
+=====================
+Managing Your Account
+=====================
+
 `  <#PersonalAccounts>`__
 
 Personal accounts
@@ -321,5 +325,5 @@ In a paid plan, organizations can:
 
 See `our pricing <https://anaconda.org/about/pricing>`__ for details.
 
-.. |Anaconda Cloud home page| image:: /img/anaconda-cloud-home.jpg
-.. |Anaconda Cloud user toolbar| image:: /img/Anaconda-Cloud-User-Toolbar.jpg
+.. |Anaconda Cloud home page| image:: /img/cloud-home.jpg
+.. |Anaconda Cloud user toolbar| image:: /img/cloud-user-toolbar.jpg
