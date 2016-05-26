@@ -1,3 +1,7 @@
+==============
+Anaconda Build
+==============
+
 `  <#Overview>`__
 
 Overview
@@ -362,7 +366,7 @@ For this example:
 
 You should see an active webhook at the end of this process.
 
-|Continuous Integration page|
+|Webhook Continuous Integration page|
 
 Now, test that the web hook is correct by pushing an empty commit.
 
@@ -726,7 +730,9 @@ Environment variables
 BINSTAR\_BUILD
     The build number as MAJOR.MINOR
 BINSTAR\_BUILD\_MAJOR
+    The major build number
 BINSTAR\_BUILD\_MINOR
+    The minor build number
 BINSTAR\_ENGINE
     the engine from the engine tag
 BINSTAR\_PLATFORM
@@ -1016,5 +1022,5 @@ container::
 
 Bash
 
-.. |Continuous Integration page| image:: /img/ci.png
-.. |Continuous Integration page| image:: /img/webhook-ci.png
+.. |Continuous Integration page| image:: /img/cloud-ci.png
+.. |Webhook Continuous Integration page| image:: /img/cloud-webhook-ci.png

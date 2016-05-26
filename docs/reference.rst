@@ -1,3 +1,7 @@
+=========
+Reference
+=========
+
 `  <#HowTo>`__
 
 How To...
@@ -463,12 +467,19 @@ Anaconda-Client CLI, package developers can create additional labels
 such as development (labels/dev) test (labels/test) or other labels
 which will be searched only if the user specifies the label.
 
-| https://anaconda.org/travis/labels/main - the label searched by
-default https://anaconda.org/travis - same as default label with "main"
-implicit https://anaconda.org/travis/labels/dev - contains the packages
+https://anaconda.org/travis/labels/main - the label searched by
+default
+
+https://anaconda.org/travis - same as default label with "main"
+implicit
+
+https://anaconda.org/travis/labels/dev - contains the packages
 in development
-|  https://anaconda.org/travis/labels/test - contains packages ready to
-test https://anaconda.org/travis/labels/any-custom-label - any label you
+
+https://anaconda.org/travis/labels/test - contains packages ready to
+test
+
+https://anaconda.org/travis/labels/any-custom-label - any label you
 wish to use.
 
 `  <#Conda>`__
