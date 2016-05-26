@@ -676,5 +676,5 @@ Now your version 2.0 is in main:
 
     conda search --override -c USERNAME conda-package
 
-.. |Org groups page| image:: img/cloud-org-groups.png
-.. |Org owners page| image:: img/cloud-org-owners.png
+.. |Org groups page| image:: /img/cloud-org-groups.png
+.. |Org owners page| image:: /img/cloud-org-owners.png
