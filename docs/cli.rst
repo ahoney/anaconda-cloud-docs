@@ -86,12 +86,9 @@ Anaconda Cloud command line manager
 `whoami <#Whoami>`__
     Print the information of the current user
 
-`  <#Authentication>`__
 
 Authentication
 ~~~~~~~~~~~~~~
-
-`  <#Auth>`__
 
 auth
 ^^^^
@@ -154,7 +151,6 @@ See also:
 -  `Using Anaconda Cloud
    Tokens <http://docs.anaconda.org/using.html#Tokens>`__
 
-`  <#Login>`__
 
 login
 ^^^^^
@@ -176,8 +172,6 @@ Authenticate a user
 --password LOGIN\_PASSWORD
     Specify your password. If this is not given, you will be prompted
 
-`  <#Whoami>`__
-
 whoami
 ^^^^^^
 
@@ -192,8 +186,6 @@ Print the information of the current user
 
 Informational
 ~~~~~~~~~~~~~
-
-`  <#Show>`__
 
 show
 ^^^^
@@ -220,8 +212,6 @@ Examples:
     anaconda show continuumio/python
     anaconda show continuumio/python/2.7.5
     anaconda show sean/meta/1.2.0/meta.tar.gz
-
-`  <#Search>`__
 
 search
 ^^^^^^
@@ -360,12 +350,8 @@ exist on the server.
 
     anaconda config --set auto_register yes|no
 
-`  <#ManagingPackages>`__
-
 Managing Packages
 ~~~~~~~~~~~~~~~~~
-
-`  <#Package>`__
 
 package
 ^^^^^^^
@@ -411,7 +397,6 @@ Anaconda Cloud package utilities
     Set the package access to private This package will require
     authorized and authenticated access to install
 
-`  <#Upload>`__
 
 upload
 ^^^^^^
@@ -495,7 +480,6 @@ See Also
 -  `Uploading a PyPI
    Package <http://docs.anaconda.org/using.html#UploadingPypiPackages>`__
 
-`  <#Label>`__
 
 label
 ^^^^^
@@ -528,8 +512,6 @@ Manage your Anaconda Cloud channels
 --remove LABEL
     Remove a label
 
-`  <#Copy>`__
-
 copy
 ^^^^
 
@@ -556,47 +538,30 @@ Copy packages from one account to another
 --to-label TO\_LABEL
     Label to put all packages into
 
-`  <#AnacondaBuild>`__
 
 Anaconda-Build
 --------------
 
-`  <#SubmittingBuilds>`__
-
 Submitting Builds
 ~~~~~~~~~~~~~~~~~
-
-`  <#Submit>`__
 
 submit
 ^^^^^^
 
-`  <#Save>`__
-
 save
 ^^^^
-
-`  <#Trigger>`__
 
 trigger
 ^^^^^^^
 
-`  <#HostingBuildMachines>`__
-
 Hosting Build machines
 ~~~~~~~~~~~~~~~~~~~~~~
-
-`  <#Queue>`__
 
 queue
 ^^^^^
 
-`  <#Worker>`__
-
 worker
 ^^^^^^
-
-`  <#DockerWorker>`__
 
 docker-worker
 ^^^^^^^^^^^^^
