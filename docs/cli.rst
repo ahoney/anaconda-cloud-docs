@@ -542,26 +542,338 @@ Copy packages from one account to another
 Anaconda-Build
 --------------
 
+Anaconda build client for continuous integration, testing and building packages
+
+| **optional arguments:**
+
+-h / --help
+    show this help message and exit
+-V / --version
+    show program's version number and exit
+
+| **output:**
+
+--show-traceback
+    Show the full traceback for chalmers user errors (default: tty)
+--hide-traceback
+    Hide the full traceback for chalmers user errors
+-v / --verbose
+    print debug information ot the console
+-q / --quiet
+    Only show warnings or errors the console
+--color
+    always display with colors
+--no-color
+    never display with colors
+
+| **anaconda-client options:**
+
+-t / --token TOKEN
+    Authentication token to use. May be a token or a path to a file
+    containing a token
+-s / --site SITE
+    select the anaconda-client site to use
+
+| **Commands:**
+
+`backlog <cli.html#Backlog>`__
+    Run a build worker to build jobs off of a anaconda build queue
+`build <cli.html#Build>`__
+    Anaconda build client for continuous integration, testing and
+    building packages
+`init <cli.html#Init>`__
+    Initialize Build file
+`keyfile <cli.html#Keyfile>`__
+    [Advanced] Not documented yet
+`keyfiles <cli.html#Keyfiles>`__
+    [Advanced] Not documented yet
+`list <cli.html#List>`__
+    list the builds for package
+`list-all <cli.html#List-All>`__
+    list the builds for package
+`queue <cli.html#Queue>`__
+    Inspect build queue
+`resubmit <cli.html#Resubmit>`__
+    Resubmit build
+`results <cli.html#Results>`__
+    [Advanced] Attach results to build
+`save <cli.html#Save>`__
+    Save build info to be triggered later
+`submit <cli.html#Submit>`__
+    Submit a directory or github repo for building
+`tail <cli.html#Tail>`__
+    Tail the build output of build number X.Y
+`trigger <cli.html#Trigger>`__
+    Trigger a build that has been saved
+`worker <cli.html#Worker>`__
+    Anaconda build client for continuous integration, testing and
+    building packages
+
+| 
+
+Anaconda Build command
+
+To get started with anaconda build run:
+
+::
+
+    anaconda build init  anaconda build submit .  
+
+See also:
+
+-  `Anaconda Build </building.html>`__
+
+| 
+| `  <cli.html#SubmittingBuilds>`__
+
 Submitting Builds
 ~~~~~~~~~~~~~~~~~
 
+`  <cli.html#Submit>`__
+
 submit
-^^^^^^
+Submit a directory or github repo for building
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| **positional arguments:**
+
+PATH
+    filepath or github url to submit
+
+| **optional arguments:**
+
+-h / --help
+    show this help message and exit
+--git-url GIT\_URL
+    The github url with valid .binstar.yml file to clone
+-n / --dry-run
+    Parse the build file but don't submit
+--no-progress
+    Don't show progress bar
+--dont-git-ignore
+    Don't ignore files from .gitignore
+--queue QUEUE
+    Build on this queue
+
+| **filters:**
+
+--buildhost BUILDHOST
+    The host name of the intended build worker
+--dist DIST
+    The os distribution of intended build worker (e.g centos, ubuntu)
+    Use 'anaconda build queue' to view the workers
+--platform PLATFORM
+    The platform to run (e.g linux-64, win-64, osx-64, etc) (default:
+    all the platforms in the .binstar.yaml file)
+
+| **build control:**
+
+--channel
+    [DEPRECATED] Upload targets to this channel
+--label
+    Upload targets to this label
+--test-only / --no-upload
+    Don't upload the build targets to Anaconda Cloud, but run everything
+    else
+-p / --package USER/PACKAGE
+    The Anaconda Cloud package namespace to upload the build to
+--sub-dir SUB\_DIR
+    The sub directory within the git repository (github url submits
+    only)
+
+| **tail:**
+
+--tail / -f
+    Do 'tail -f on each sub-build log or each of the sub-builds given in
+    '--sub-builds'
+--sub-builds / -s
+    If --tail or -f is given, then tail sub-builds in '--sub-builds '
+    Otherwise with --tail or -f, tail -f all sub-builds
+
+| 
+
+Build command
+
+Submit a build from your local path or via a git url:
+
+See also:
+
+-  `Submit A Build </build.html#SubmitABuild>`__
+-  `Submit A Build From Github </build.html#GithubBuilds>`__
+
+| 
+
+`  <cli.html#Save>`__
 
 save
-^^^^
+Save build info to be triggered later
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| **positional arguments:**
+
+URL
+    The http github url to the repo
+
+| **optional arguments:**
+
+-h / --help
+    show this help message and exit
+-p / --package USER/PACKAGE
+    The Anaconda Cloud package namespace to upload the build to
+--sub-dir SUB\_DIR
+    The sub directory within the git repository (github url submits
+    only)
+--channel
+    [DEPRECATED] Upload targets to this channel
+--label
+    Upload targets to this label
+--queue QUEUE
+    Build on this queue
+--email
+    Anaconda Cloud usernames or email addresses to email when the build
+    completes
+
+| 
+
+Save build info to be triggered later
+
+See also:
+
+-  `Save and Trigger Your
+   Builds </build.html#SaveAndTriggerYourBuilds>`__
+
+| 
+
+`  <cli.html#Trigger>`__
 
 trigger
-^^^^^^^
+Trigger a build that has been saved
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| **positional arguments:**
+
+USER/PACKAGE
+    The Anaconda Cloud package to trigger a build on
+
+| **optional arguments:**
+
+-h / --help
+    show this help message and exit
+--channel
+    [DEPRECATED] Upload targets to this channel
+--label
+    Upload targets to this label
+--queue QUEUE
+    Build on this queue
+--branch BRANCH
+    Branch to build
+
+| **filters:**
+
+--buildhost BUILDHOST
+    The host name of the intended build worker
+--dist DIST
+    The os distribution of intended build worker (e.g centos, ubuntu)
+    Use 'anaconda build queue' to view the workers
+--platform PLATFORM
+    The platform to run (e.g linux-64, win-64, osx-64, etc) (default:
+    all the platforms in the .binstar.yaml file)
+--test-only / --no-upload
+    Don't upload the build targets to Anaconda Cloud, but run everything
+    else
+
+| **tail:**
+
+--tail / -f
+    Do 'tail -f on each sub-build log or each of the sub-builds given in
+    '--sub-builds'
+--sub-builds / -s
+    If --tail or -f is given, then tail sub-builds in '--sub-builds '
+    Otherwise with --tail or -f, tail -f all sub-builds
+
+| 
+
+Trigger a build that has been saved
+
+See also:
+
+-  `Save and Trigger Your
+   Builds </build.html#SaveAndTriggerYourBuilds>`__
+
+| 
+| `  <cli.html#HostingBuildMachines>`__
 
 Hosting Build machines
 ~~~~~~~~~~~~~~~~~~~~~~
 
+`  <cli.html#Queue>`__
+
 queue
-^^^^^
+Build Queue
+^^^^^^^^^^^
+
+| **positional arguments:**
+
+USERNAME/QUEUENAME
+    Specify a queue to perform an operation on
+
+| **optional arguments:**
+
+-h / --help
+    show this help message and exit
+-r / --remove
+    Remove the queue specified with the -q/--queue option
+-c / --create
+    Create a new queue
+--remove-worker WORKER\_ID
+    Remove a worker from a queue
+
+| 
+
+`  <cli.html#Worker>`__
 
 worker
+None
 ^^^^^^
+
+| **optional arguments:**
+
+-h / --help
+    show this help message and exit
+
+| **Commands:**
+
+`deregister <cli.html#Deregister>`__
+    Deregister a build worker to build jobs off of a binstar build queue
+`docker\_run <cli.html#Docker_Run>`__
+    Run a build worker in a docker container to build jobs off of a
+    binstar build queue
+`list <cli.html#List>`__
+    List build workers and queues
+`register <cli.html#Register>`__
+    Register a build worker to build jobs off of a binstar build queue
+`run <cli.html#Run>`__
+    Run a build worker to build jobs off of a binstar build queue
+
+| 
+
+Anaconda Build command
+
+To get started with anaconda worker run:
+
+::
+
+    anaconda worker register USER/QUEUE -n NAME  anaconda worker run NAME  
+
+See also:
+
+-  `Anaconda Build </build-config.html#BuildWorkers>`__
+
+| 
+
+`  <cli.html#DockerWorker>`__
 
 docker-worker
 ^^^^^^^^^^^^^
+
+| 
