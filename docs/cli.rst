@@ -555,14 +555,19 @@ Anaconda build client for continuous integration, testing and building packages
 
 --show-traceback
     Show the full traceback for chalmers user errors (default: tty)
+
 --hide-traceback
     Hide the full traceback for chalmers user errors
+
 -v / --verbose
     print debug information ot the console
+
 -q / --quiet
     Only show warnings or errors the console
+
 --color
     always display with colors
+
 --no-color
     never display with colors
 
@@ -632,8 +637,9 @@ Submitting Builds
 `  <cli.html#Submit>`__
 
 submit
+^^^^^^
+
 Submit a directory or github repo for building
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | **positional arguments:**
 
@@ -644,14 +650,19 @@ PATH
 
 -h / --help
     show this help message and exit
+
 --git-url GIT\_URL
     The github url with valid .binstar.yml file to clone
+
 -n / --dry-run
     Parse the build file but don't submit
+
 --no-progress
     Don't show progress bar
+
 --dont-git-ignore
     Don't ignore files from .gitignore
+
 --queue QUEUE
     Build on this queue
 
@@ -659,9 +670,11 @@ PATH
 
 --buildhost BUILDHOST
     The host name of the intended build worker
+
 --dist DIST
     The os distribution of intended build worker (e.g centos, ubuntu)
     Use 'anaconda build queue' to view the workers
+
 --platform PLATFORM
     The platform to run (e.g linux-64, win-64, osx-64, etc) (default:
     all the platforms in the .binstar.yaml file)
@@ -670,13 +683,17 @@ PATH
 
 --channel
     [DEPRECATED] Upload targets to this channel
+
 --label
     Upload targets to this label
+
 --test-only / --no-upload
     Don't upload the build targets to Anaconda Cloud, but run everything
     else
+
 -p / --package USER/PACKAGE
     The Anaconda Cloud package namespace to upload the build to
+
 --sub-dir SUB\_DIR
     The sub directory within the git repository (github url submits
     only)
@@ -706,8 +723,9 @@ See also:
 `  <cli.html#Save>`__
 
 save
+^^^^
+
 Save build info to be triggered later
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | **positional arguments:**
 
@@ -718,17 +736,23 @@ URL
 
 -h / --help
     show this help message and exit
+
 -p / --package USER/PACKAGE
     The Anaconda Cloud package namespace to upload the build to
+
 --sub-dir SUB\_DIR
     The sub directory within the git repository (github url submits
     only)
+
 --channel
     [DEPRECATED] Upload targets to this channel
+
 --label
     Upload targets to this label
+
 --queue QUEUE
     Build on this queue
+
 --email
     Anaconda Cloud usernames or email addresses to email when the build
     completes
@@ -747,8 +771,9 @@ See also:
 `  <cli.html#Trigger>`__
 
 trigger
+^^^^^^^
+
 Trigger a build that has been saved
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | **positional arguments:**
 
@@ -759,12 +784,16 @@ USER/PACKAGE
 
 -h / --help
     show this help message and exit
+
 --channel
     [DEPRECATED] Upload targets to this channel
+
 --label
     Upload targets to this label
+
 --queue QUEUE
     Build on this queue
+
 --branch BRANCH
     Branch to build
 
@@ -772,12 +801,15 @@ USER/PACKAGE
 
 --buildhost BUILDHOST
     The host name of the intended build worker
+
 --dist DIST
     The os distribution of intended build worker (e.g centos, ubuntu)
     Use 'anaconda build queue' to view the workers
+
 --platform PLATFORM
     The platform to run (e.g linux-64, win-64, osx-64, etc) (default:
     all the platforms in the .binstar.yaml file)
+
 --test-only / --no-upload
     Don't upload the build targets to Anaconda Cloud, but run everything
     else
@@ -787,6 +819,7 @@ USER/PACKAGE
 --tail / -f
     Do 'tail -f on each sub-build log or each of the sub-builds given in
     '--sub-builds'
+
 --sub-builds / -s
     If --tail or -f is given, then tail sub-builds in '--sub-builds '
     Otherwise with --tail or -f, tail -f all sub-builds
@@ -809,8 +842,9 @@ Hosting Build machines
 `  <cli.html#Queue>`__
 
 queue
+^^^^^
+
 Build Queue
-^^^^^^^^^^^
 
 | **positional arguments:**
 
@@ -833,8 +867,9 @@ USERNAME/QUEUENAME
 `  <cli.html#Worker>`__
 
 worker
-None
 ^^^^^^
+
+None
 
 | **optional arguments:**
 
