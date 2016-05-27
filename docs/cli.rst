@@ -11,8 +11,6 @@ anaconda -h
 
 The full command reference is shown below.
 
-`  <#Anaconda>`__
-
 anaconda
 --------
 
@@ -88,12 +86,9 @@ Anaconda Cloud command line manager
 `whoami <#Whoami>`__
     Print the information of the current user
 
-`  <#Authentication>`__
 
 Authentication
 ~~~~~~~~~~~~~~
-
-`  <#Auth>`__
 
 auth
 ^^^^
@@ -156,7 +151,6 @@ See also:
 -  `Using Anaconda Cloud
    Tokens <http://docs.anaconda.org/using.html#Tokens>`__
 
-`  <#Login>`__
 
 login
 ^^^^^
@@ -178,8 +172,6 @@ Authenticate a user
 --password LOGIN\_PASSWORD
     Specify your password. If this is not given, you will be prompted
 
-`  <#Whoami>`__
-
 whoami
 ^^^^^^
 
@@ -194,8 +186,6 @@ Print the information of the current user
 
 Informational
 ~~~~~~~~~~~~~
-
-`  <#Show>`__
 
 show
 ^^^^
@@ -222,8 +212,6 @@ Examples:
     anaconda show continuumio/python
     anaconda show continuumio/python/2.7.5
     anaconda show sean/meta/1.2.0/meta.tar.gz
-
-`  <#Search>`__
 
 search
 ^^^^^^
@@ -288,7 +276,7 @@ anaconda-client configuration
 Get, Set, Remove or Show the anaconda-client configuration.
 
 anaconda-client sites
-                     
+
 
 anaconda-client sites are a mechanism to allow users to quickly switch
 between Anaconda Cloud instances. This is primarily used for testing the
@@ -313,7 +301,7 @@ anaconda-client comes with two pre-configured sites ``alpha`` and
        anaconda whoami
 
 Add a anaconda-client site
-                          
+
 
 After installing `Anaconda
 Enterprise <http://continuum.io/anaconda-server>`__ you can add a site
@@ -325,7 +313,7 @@ named **site\_name** like this:
     anaconda config --set default_site site_name
 
 Site Options VS Global Options
-                              
+
 
 All options can be set as global options - affecting all sites, or site
 options - affecting only one site
@@ -344,7 +332,7 @@ with ``sites.site_name`` e.g.
     anaconda config --set sites.site_name.OPTION VALUE
 
 Common anaconda-client configuration options
-                                            
+
 
 -  ``url``: Set the anaconda api url (default: https://api.anaconda.org)
 -  ``verify_ssl``: Perform ssl validation on the https requests.
@@ -352,7 +340,7 @@ Common anaconda-client configuration options
    file.
 
 Toggle auto\_register when doing anaconda upload
-                                                
+
 
 The default is yes, automatically create a new package when uploading.
 If no, then an upload will fail if the package name does not already
@@ -362,12 +350,8 @@ exist on the server.
 
     anaconda config --set auto_register yes|no
 
-`  <#ManagingPackages>`__
-
 Managing Packages
 ~~~~~~~~~~~~~~~~~
-
-`  <#Package>`__
 
 package
 ^^^^^^^
@@ -413,7 +397,6 @@ Anaconda Cloud package utilities
     Set the package access to private This package will require
     authorized and authenticated access to install
 
-`  <#Upload>`__
 
 upload
 ^^^^^^
@@ -497,7 +480,6 @@ See Also
 -  `Uploading a PyPI
    Package <http://docs.anaconda.org/using.html#UploadingPypiPackages>`__
 
-`  <#Label>`__
 
 label
 ^^^^^
@@ -530,8 +512,6 @@ Manage your Anaconda Cloud channels
 --remove LABEL
     Remove a label
 
-`  <#Copy>`__
-
 copy
 ^^^^
 
@@ -558,47 +538,30 @@ Copy packages from one account to another
 --to-label TO\_LABEL
     Label to put all packages into
 
-`  <#AnacondaBuild>`__
 
 Anaconda-Build
 --------------
 
-`  <#SubmittingBuilds>`__
-
 Submitting Builds
 ~~~~~~~~~~~~~~~~~
-
-`  <#Submit>`__
 
 submit
 ^^^^^^
 
-`  <#Save>`__
-
 save
 ^^^^
-
-`  <#Trigger>`__
 
 trigger
 ^^^^^^^
 
-`  <#HostingBuildMachines>`__
-
 Hosting Build machines
 ~~~~~~~~~~~~~~~~~~~~~~
-
-`  <#Queue>`__
 
 queue
 ^^^^^
 
-`  <#Worker>`__
-
 worker
 ^^^^^^
-
-`  <#DockerWorker>`__
 
 docker-worker
 ^^^^^^^^^^^^^

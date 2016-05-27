@@ -1,9 +1,7 @@
 :orphan:
-
-`  <#Welcome>`__
-
-Welcome
-=======
+===============
+Anaconda Cloud
+===============
 
 `  <#WhatIsAnacondaCloud>`__
 
@@ -45,7 +43,7 @@ options <https://anaconda.org/about/pricing>`__.
 
 .. toctree::
     :maxdepth: 1
-    
+
     quickstart
     get-involved
     managing-account
