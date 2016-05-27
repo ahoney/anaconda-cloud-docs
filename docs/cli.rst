@@ -11,8 +11,6 @@ anaconda -h
 
 The full command reference is shown below.
 
-`  <#Anaconda>`__
-
 anaconda
 --------
 
@@ -288,7 +286,7 @@ anaconda-client configuration
 Get, Set, Remove or Show the anaconda-client configuration.
 
 anaconda-client sites
-                     
+
 
 anaconda-client sites are a mechanism to allow users to quickly switch
 between Anaconda Cloud instances. This is primarily used for testing the
@@ -313,7 +311,7 @@ anaconda-client comes with two pre-configured sites ``alpha`` and
        anaconda whoami
 
 Add a anaconda-client site
-                          
+
 
 After installing `Anaconda
 Enterprise <http://continuum.io/anaconda-server>`__ you can add a site
@@ -325,7 +323,7 @@ named **site\_name** like this:
     anaconda config --set default_site site_name
 
 Site Options VS Global Options
-                              
+
 
 All options can be set as global options - affecting all sites, or site
 options - affecting only one site
@@ -344,7 +342,7 @@ with ``sites.site_name`` e.g.
     anaconda config --set sites.site_name.OPTION VALUE
 
 Common anaconda-client configuration options
-                                            
+
 
 -  ``url``: Set the anaconda api url (default: https://api.anaconda.org)
 -  ``verify_ssl``: Perform ssl validation on the https requests.
@@ -352,7 +350,7 @@ Common anaconda-client configuration options
    file.
 
 Toggle auto\_register when doing anaconda upload
-                                                
+
 
 The default is yes, automatically create a new package when uploading.
 If no, then an upload will fail if the package name does not already
