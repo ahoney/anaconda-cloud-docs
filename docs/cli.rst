@@ -18,37 +18,37 @@ Anaconda Cloud command line manager
 
 **optional arguments:**
 
--h / --help
+`-h / --help`
     show this help message and exit
--V / --version
+`-V / --version`
     show program's version number and exit
 
 **output:**
 
---show-traceback
+`--show-traceback`
     Show the full traceback for chalmers user errors (default: tty)
 
---hide-traceback
+`--hide-traceback`
     Hide the full traceback for chalmers user errors
 
---verbose / -v
+`--verbose / -v`
     print debug information ot the console
 
---quiet / -q
+`--quiet / -q`
     Only show warnings or errors the console
 
---color
+`--color`
     always display with colors
 
---no-color
+`--no-color`
     never display with colors
 
 **anaconda-client options:**
 
--t / --token TOKEN
+`-t / --token TOKEN`
     Authentication token to use. May be a token or a path to a file
     containing a token
--s / --site SITE
+`-s / --site SITE`
     select the anaconda-client site to use
 
 **Commands:**
@@ -97,51 +97,51 @@ Manage Authorization Tokens
 
 **optional arguments:**
 
--h / --help
+`-h / --help`
     show this help message and exit
--n / --name NAME
+`-n / --name NAME`
     A unique name so you can identify this token later. View your tokens
     at anaconda.org/settings/access
--o / --org / --organization ORGANIZATION
+`-o / --org / --organization ORGANIZATION`
     Set the token owner (must be an organization)
 
 **token creation arguments:**
 
 These arguments are only valid with the ``--create`` action
 
---strength STRENGTH
+`--strength STRENGTH`
     Create a token with STRENGTH of "strong" or "weak"
 
---strong
+`--strong`
     Create a longer token (default)
 
---weak / -w
+`--weak / -w`
     Create a shorter token
 
---url URL
+`--url URL`
     The url of the application that will use this token
 
---max-age MAX\_AGE
+`--max-age MAX\_AGE`
     The maximum age in seconds that this token will be valid for
 
---scopes / -s
+`--scopes / -s`
     Scopes for token. For example if you want to limit this token to
     conda downloads only you would use --scopes "repo conda:download"
 
---out OUT
+`--out OUT`
     Output file
 
 **actions:**
 
--x / --list-scopes
+`-x / --list-scopes`
     list all authentication scopes
--l / --list
+`-l / --list`
     list all user authentication tokens
--r / --remove NAME
+`-r / --remove NAME`
     remove authentication tokens
--c / --create
+`-c / --create`
     Create an authentication token
--i / --info / --current-info
+`-i / --info / --current-info`
     Show information about the current authentication token
 
 Manage Authentication tokens
@@ -159,17 +159,17 @@ Authenticate a user
 
 **optional arguments:**
 
---help / -h
+`--help / -h`
     show this help message and exit
 
---hostname HOSTNAME
+`--hostname HOSTNAME`
     Specify the host name of this login, this should be unique
     (default: ASUSN)
 
---username LOGIN\_USERNAME
+`--username LOGIN\_USERNAME`
     Specify your username. If this is not given, you will be prompted
 
---password LOGIN\_PASSWORD
+`--password LOGIN\_PASSWORD`
     Specify your password. If this is not given, you will be prompted
 
 whoami
@@ -179,7 +179,7 @@ Print the information of the current user
 
 **optional arguments:**
 
--h / --help
+`-h / --help`
     show this help message and exit
 
 `  <#Informational>`__
@@ -199,7 +199,7 @@ Show information about an object
 
 **optional arguments:**
 
--h / --help
+`-h / --help`
     show this help message and exit
 
 Show information about an object
@@ -225,9 +225,9 @@ Search Anaconda Cloud
 
 **optional arguments:**
 
--h / --help
+`-h / --help`
     show this help message and exit
--t / --package-type PACKAGE\_TYPE
+`-t / --package-type PACKAGE\_TYPE`
     only search for packages of this type
 
 Search Anaconda Cloud for packages
@@ -241,34 +241,34 @@ Binstar configuration
 
 **optional arguments:**
 
---help / -h
+`--help / -h`
     show this help message and exit
 
---type TYPE
+`--type TYPE`
     The type of the values in the set commands
 
 **actions:**
 
---set [u'name', u'value']
+`--set [u'name', u'value']`
     sets a new variable: name value
 
---get name
+`--get name`
     get value: name
 
---remove
+`--remove`
     removes a variable
 
---show
+`--show`
     show all variables
 
---files / -f
+`--files / -f`
     show the config file names
 
 **location:**
 
--u / --user
+`-u / --user`
     set a variable for this user
--s / --site
+`-s / --site`
     set a variable for all users on this machine
 
 anaconda-client configuration
@@ -365,35 +365,35 @@ Anaconda Cloud package utilities
 
 **optional arguments:**
 
--h / --help
+`-h / --help`
     show this help message and exit
 
 **actions:**
 
---add-collaborator user
+`--add-collaborator user`
     username of the collaborator you want to add
---list-collaborators
+`--list-collaborators`
     list all of the collaborators in a package
---create
+`--create`
     Create a package
 
 **metadata arguments:**
 
---summary SUMMARY
+`--summary SUMMARY`
     Set the package short summary
 
---license LICENSE
+`--license LICENSE`
     Set the package license
 
---license-url LICENSE\_URL
+`--license-url LICENSE\_URL`
     Set the package license url
 
 **privacy:**
 
---personal
+`--personal`
     Set the package access to personal This package will be available
     only on your personal registries
---private
+`--private`
     Set the package access to private This package will require
     authorized and authenticated access to install
 
@@ -410,60 +410,60 @@ Upload packages to Anaconda Cloud
 
 **optional arguments:**
 
---help / -h
+`--help / -h`
     show this help message and exit
 
---channel / -c CHANNELS
+`--channel / -c CHANNELS`
     [DEPRECATED] Add this file to a specific channel. Warning: if the
     file channels do not include "main",the file will not show up in
     your user channel
 
---label / -l
+`--label / -l`
     Add this file to a specific label. Warning: if the file labels do
     not include "main",the file will not show up in your user label
 
---no-progress
+`--no-progress`
     Don't show upload progress
 
---user / -u USER
+`--user / -u USER`
     User account, defaults to the current user
 
---no-register
+`--no-register`
     Don't create a new package namespace if it does not exist
 
---register
+`--register`
     Create a new package namespace if it does not exist
 
---build-id BUILD\_ID
+`--build-id BUILD\_ID`
     Anaconda Cloud Build ID (internal only)
 
---interactive / -i
+`--interactive / -i`
     Run an interactive prompt if any packages are missing
 
---fail / -f
+`--fail / -f`
     Fail if a package or release does not exist (default)
 
---force
+`--force`
     Force a package upload regardless of errors
 
 **metadata options:**
 
---package / -p PACKAGE
+`--package / -p PACKAGE`
     Defaults to the package name in the uploaded file
 
---version / -v VERSION
+`--version / -v VERSION`
     Defaults to the package version in the uploaded file
 
---summary / -s SUMMARY
+`--summary / -s SUMMARY`
     Set the summary of the package
 
---package-type / -t PACKAGE\_TYPE
+`--package-type / -t PACKAGE\_TYPE`
     Set the package type, defaults to autodetect
 
---description / -d DESCRIPTION
+`--description / -d DESCRIPTION`
     description of the file(s)
 
---thumbnail THUMBNAIL
+`--thumbnail THUMBNAIL`
     Notebook's thumbnail image
 
 ::
@@ -488,28 +488,28 @@ Manage your Anaconda Cloud channels
 
 **optional arguments:**
 
---help / -h
+`--help / -h`
     show this help message and exit
 
---organization / -o ORGANIZATION
+`--organization / -o ORGANIZATION`
     Manage an organizations labels
 
---copy LABEL LABEL
+`--copy LABEL LABEL`
     Copy a label
 
---list
+`--list`
     list all labels for a user
 
---show LABEL
+`--show LABEL`
     Show all of the files in a label
 
---lock LABEL
+`--lock LABEL`
     Lock a label
 
---unlock LABEL
+`--unlock LABEL`
     Unlock a label
 
---remove LABEL
+`--remove LABEL`
     Remove a label
 
 copy
@@ -525,17 +525,17 @@ Copy packages from one account to another
 
 **optional arguments:**
 
--h / --help
+`-h / --help`
     show this help message and exit
---to-owner TO\_OWNER
+`--to-owner TO\_OWNER`
     User account to copy package to (default: your account)
---from-channel FROM\_CHANNEL
+`--from-channel FROM\_CHANNEL`
     [DEPRECATED]Channel to copy packages from
---to-channel TO\_CHANNEL
+`--to-channel TO\_CHANNEL`
     [DEPRECATED]Channel to put all packages into
---from-label FROM\_LABEL
+`--from-label FROM\_LABEL`
     Label to copy packages from
---to-label TO\_LABEL
+`--to-label TO\_LABEL`
     Label to put all packages into
 
 
@@ -546,37 +546,37 @@ Anaconda build client for continuous integration, testing and building packages
 
 | **optional arguments:**
 
--h / --help
+`-h / --help`
     show this help message and exit
--V / --version
+`-V / --version`
     show program's version number and exit
 
 | **output:**
 
---show-traceback
+`--show-traceback`
     Show the full traceback for chalmers user errors (default: tty)
 
---hide-traceback
+`--hide-traceback`
     Hide the full traceback for chalmers user errors
 
--v / --verbose
+`-v / --verbose`
     print debug information ot the console
 
--q / --quiet
+`-q / --quiet`
     Only show warnings or errors the console
 
---color
+`--color`
     always display with colors
 
---no-color
+`--no-color`
     never display with colors
 
 | **anaconda-client options:**
 
--t / --token TOKEN
+`-t / --token TOKEN`
     Authentication token to use. May be a token or a path to a file
     containing a token
--s / --site SITE
+`-s / --site SITE`
     select the anaconda-client site to use
 
 | **Commands:**
@@ -648,62 +648,62 @@ PATH
 
 | **optional arguments:**
 
--h / --help
+`-h / --help`
     show this help message and exit
 
---git-url GIT\_URL
+`--git-url GIT\_URL`
     The github url with valid .binstar.yml file to clone
 
--n / --dry-run
+`-n / --dry-run`
     Parse the build file but don't submit
 
---no-progress
+`--no-progress`
     Don't show progress bar
 
---dont-git-ignore
+`--dont-git-ignore`
     Don't ignore files from .gitignore
 
---queue QUEUE
+`--queue QUEUE`
     Build on this queue
 
 | **filters:**
 
---buildhost BUILDHOST
+`--buildhost BUILDHOST`
     The host name of the intended build worker
 
---dist DIST
+`--dist DIST`
     The os distribution of intended build worker (e.g centos, ubuntu)
     Use 'anaconda build queue' to view the workers
 
---platform PLATFORM
+`--platform PLATFORM`
     The platform to run (e.g linux-64, win-64, osx-64, etc) (default:
     all the platforms in the .binstar.yaml file)
 
 | **build control:**
 
---channel
+`--channel`
     [DEPRECATED] Upload targets to this channel
 
---label
+`--label`
     Upload targets to this label
 
---test-only / --no-upload
+`--test-only / --no-upload`
     Don't upload the build targets to Anaconda Cloud, but run everything
     else
 
--p / --package USER/PACKAGE
+`-p / --package USER/PACKAGE`
     The Anaconda Cloud package namespace to upload the build to
 
---sub-dir SUB\_DIR
+`--sub-dir SUB\_DIR`
     The sub directory within the git repository (github url submits
     only)
 
 | **tail:**
 
---tail / -f
+`--tail / -f`
     Do 'tail -f on each sub-build log or each of the sub-builds given in
     '--sub-builds'
---sub-builds / -s
+`--sub-builds / -s`
     If --tail or -f is given, then tail sub-builds in '--sub-builds '
     Otherwise with --tail or -f, tail -f all sub-builds
 
@@ -734,26 +734,26 @@ URL
 
 | **optional arguments:**
 
--h / --help
+`-h / --help`
     show this help message and exit
 
--p / --package USER/PACKAGE
+`-p / --package USER/PACKAGE`
     The Anaconda Cloud package namespace to upload the build to
 
---sub-dir SUB\_DIR
+`--sub-dir SUB\_DIR`
     The sub directory within the git repository (github url submits
     only)
 
---channel
+`--channel`
     [DEPRECATED] Upload targets to this channel
 
---label
+`--label`
     Upload targets to this label
 
---queue QUEUE
+`--queue QUEUE`
     Build on this queue
 
---email
+`--email`
     Anaconda Cloud usernames or email addresses to email when the build
     completes
 
@@ -782,45 +782,45 @@ USER/PACKAGE
 
 | **optional arguments:**
 
--h / --help
+`-h / --help`
     show this help message and exit
 
---channel
+`--channel`
     [DEPRECATED] Upload targets to this channel
 
---label
+`--label`
     Upload targets to this label
 
---queue QUEUE
+`--queue QUEUE`
     Build on this queue
 
---branch BRANCH
+`--branch BRANCH`
     Branch to build
 
 | **filters:**
 
---buildhost BUILDHOST
+`--buildhost BUILDHOST`
     The host name of the intended build worker
 
---dist DIST
+`--dist DIST`
     The os distribution of intended build worker (e.g centos, ubuntu)
     Use 'anaconda build queue' to view the workers
 
---platform PLATFORM
+`--platform PLATFORM`
     The platform to run (e.g linux-64, win-64, osx-64, etc) (default:
     all the platforms in the .binstar.yaml file)
 
---test-only / --no-upload
+`--test-only / --no-upload`
     Don't upload the build targets to Anaconda Cloud, but run everything
     else
 
 | **tail:**
 
---tail / -f
+`--tail / -f`
     Do 'tail -f on each sub-build log or each of the sub-builds given in
     '--sub-builds'
 
---sub-builds / -s
+`--sub-builds / -s`
     If --tail or -f is given, then tail sub-builds in '--sub-builds '
     Otherwise with --tail or -f, tail -f all sub-builds
 
@@ -853,13 +853,13 @@ USERNAME/QUEUENAME
 
 | **optional arguments:**
 
--h / --help
+`-h / --help`
     show this help message and exit
--r / --remove
+`-r / --remove`
     Remove the queue specified with the -q/--queue option
--c / --create
+`-c / --create`
     Create a new queue
---remove-worker WORKER\_ID
+`--remove-worker WORKER\_ID`
     Remove a worker from a queue
 
 | 
@@ -873,7 +873,7 @@ None
 
 | **optional arguments:**
 
--h / --help
+`-h / --help`
     show this help message and exit
 
 | **Commands:**
