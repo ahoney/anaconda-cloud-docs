@@ -28,7 +28,7 @@ Report a bug
 ============
 
 Issues with Anaconda Cloud are tracked on
-`GitHub <https://github.com/Anaconda-Server/support/issues>`__. If you
+`GitHub <https://github.com/Anaconda-Platform/support/issues>`__. If you
 think you have found a bug, please search to see if it has been
 reported, and please report it if no one else has.
 
