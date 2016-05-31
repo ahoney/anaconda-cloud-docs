@@ -38,7 +38,7 @@ Contribute to the docs
 ======================
 
 This documentation is hosted on
-`GitHub <https://github.com/Anaconda-Server/docs.anaconda.org>`__. If
+`GitHub <https://github.com/ContinuumIO/anaconda-cloud-docs>`__. If
 you believe there is an omission or error in the documentation, please
 fork the repository and submit a pull request.
 
