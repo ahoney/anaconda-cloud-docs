@@ -2,12 +2,9 @@
 Managing Your Account
 =====================
 
-`  <#PersonalAccounts>`__
-
 Personal accounts
 =================
 
-`  <#Overview>`__
 
 Overview
 ~~~~~~~~
@@ -15,8 +12,6 @@ Overview
 This section explains how to create a free or personal account, log in
 and out, and access the settings and features of different types of
 accounts.
-
-`  <#CreateFreeAccount>`__
 
 Create free account
 ~~~~~~~~~~~~~~~~~~~
@@ -77,7 +72,6 @@ Dashboard. There’s a handy button to create a new package.
 
 See Also: `Working with Packages </using.html#Packages>`__
 
-`  <#ResetPassword>`__
 
 Reset password
 ~~~~~~~~~~~~~~
@@ -94,7 +88,6 @@ account:
    `support@continuum.io <mailto:support@continuum.io>`__ for
    assistance.
 
-`  <#UpgradeOrDowngradePlan>`__
 
 Upgrade or downgrade plan
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,7 +106,6 @@ plan for you.
 NOTE: If you need assistance with billing questions, please `contact
 Continuum Analytics <https://www.continuum.io/contact-us>`__.
 
-`  <#CreateOrganization>`__
 
 Create organization
 ~~~~~~~~~~~~~~~~~~~
@@ -142,7 +134,6 @@ NOTE: The Organization Settings screen only lists organizations for
 which you are an administrator, and will not display organizations for
 which you are a user but not an administrator.
 
-`  <#DeleteAnOrganization>`__
 
 Delete an organization
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -158,7 +149,6 @@ with it:
 -  Under the Delete Account? section, click the Delete button. The
    system displays a confirmation screen.
 
-`  <#CustomizeUsersAndGroups>`__
 
 Customize users and groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -181,7 +171,6 @@ as well as add new groups and users. :
 Users will receive a dashboard notification when you add them to an
 organization.
 
-`  <#CustomizableGroupsForDifferingAccessLevels>`__
 
 Customizable groups for differing access levels
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -197,8 +186,6 @@ group of users:
 -  Click the +New Group button. Give the group a name, and assign the
    desired permissions (Read-Only, Read-Write, or Administration).
 -  Click the Save Group button.
-
-`  <#CustomizePerPackageAccessByGroup>`__
 
 Customize per-package access by group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -220,7 +207,6 @@ Organization administrators can give groups access to a package.
 -  Click Add Group to create a new group, or enter the existing Group's
    name and click the Add button.
 
-`  <#AddACollaboratorToAPackage>`__
 
 Add a collaborator to a package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -236,7 +222,6 @@ know the username of the other user(s).
 -  Enter the username of the person you want to add as a collaborator
    and Click the Add button.
 
-`  <#RemoveACollaboratorFromAPackage>`__
 
 Remove a collaborator from a package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -251,8 +236,7 @@ To revoke package access previously granted to a collaborator:
    collaborators.
 -  Click the red X button next to a collaborator to revoke their access.
 
-| 
-|  `  <#TransferAPackageToANewOwner>`__
+|
 
 Transfer a package to a new owner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -272,12 +256,9 @@ transfer a package to a new owner:
 -  Select the organization name for the new owner and click the Transfer
    Ownership button.
 
-`  <#AcademicAccounts>`__
 
 Academic Accounts
 =================
-
-`  <#Overview>`__
 
 Overview
 ~~~~~~~~
@@ -290,7 +271,6 @@ Anaconda Accelerate.
 If you need assistance with an academic account, email us at
 `support@continuum.io <mailto:support@continuum.io>`__.
 
-`  <#OrganizationAccounts>`__
 
 Organization Accounts
 =====================
@@ -306,7 +286,6 @@ organizations. Create an organization to:
 -  Host more, larger packages. See `our
    pricing <https://anaconda.org/about/pricing>`__ for details.
 
-`  <#FreeVsPaidOrganizationFeatures>`__
 
 Free vs. paid Organization Features
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -2,12 +2,8 @@
 Anaconda Build
 ==============
 
-`  <#Overview>`__
-
 Overview
 ========
-
-`  <#HowAnacondaBuildWorks>`__
 
 How Anaconda Build works
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -24,7 +20,6 @@ of a **conda package** as a final product. However, creating **conda
 packages** and uploading them to Anaconda Cloud provides a seamless and
 comprehensive workflow for the maintenance and distribution of packages.
 
-`  <#WhyUseAnacondaBuild>`__
 
 Why use Anaconda Build?
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,14 +39,12 @@ provide an efficient packaging workflow. A user may:
 -  Be part of an organization that needs to build and distribute
    cross-platform conda packages across OS X, Windows and Linux.
 
-`  <#SystemComponents>`__
 
 System components
 ~~~~~~~~~~~~~~~~~
 
 The **Anaconda Cloud Build System** is based on three main components:
 
-`  <#BuildQueues>`__
 
 Build queues
 ^^^^^^^^^^^^
@@ -70,7 +63,6 @@ The organization can create groups, add organizations and individual
 users to a group or remove them, and can turn on or off a group's access
 to a queue.
 
-`  <#Workers>`__
 
 Workers
 ^^^^^^^
@@ -89,7 +81,6 @@ use with Anaconda Cloud. For access to additional platforms you can add
 your own build workers on your local machine, in virtual machines (VMs)
 or on cloud computing providers such as AWS.
 
-`  <#Users>`__
 
 Users
 ^^^^^
@@ -101,12 +92,9 @@ To enable a user to use a queue other than the Anaconda Cloud public
 Linux-64 queue, the organization that created the queue must add the
 user to a group and grant that group access to the queue.
 
-`  <#BuildsInAnacondaCloud>`__
 
 Builds in Anaconda Cloud
 ========================
-
-`  <#Prerequisites>`__
 
 Prerequisites
 ~~~~~~~~~~~~~
@@ -125,12 +113,10 @@ Before using the Anaconda Build System:
    queues, at
    `anaconda.org/new/organization <https://anaconda.org/new/organization>`__
 
-`  <#SubmitABuild>`__
+
 
 Submit a build
 ~~~~~~~~~~~~~~
-
-`  <#CreateAPackage>`__
 
 Create a package
 ^^^^^^^^^^^^^^^^
@@ -144,7 +130,6 @@ This will be the namespace or the context of the build.
     cd conda_build_test
     anaconda package --create USERNAME/conda_build_test
 
-`  <#CreateABuildConfig>`__
 
 Create a build config
 ^^^^^^^^^^^^^^^^^^^^^
@@ -175,7 +160,6 @@ will print ``This is my anaconda build!``
 We have just created an empty package with a single Build Recipe
 instruction, namely printing ``This is my anaconda build!``.
 
-`  <#CreateCondaPackage>`__
 
 Create conda package
 ^^^^^^^^^^^^^^^^^^^^
@@ -192,7 +176,7 @@ file so it contains the following keys:
 
     package: conda_build_testscript:  - conda build .build_targets: conda
 
-| 
+|
 
 YAML
 
@@ -202,14 +186,13 @@ meta.yaml
 
     package:  name: conda_build_test  version: 0.0.1build:  number: 1  script:    - echo "This is my anaconda build with conda"requirements:  run:    - pythonabout:  summary: This is an anaconda build test!
 
-| 
+|
 
 YAML
 
 Note: Please see our publicly available `Conda
 Recipes <https://github.com/conda/conda-recipes>`__.
 
-`  <#SubmitYourCondaBuild>`__
 
 Submit your conda build
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -226,7 +209,6 @@ Submitting this build is the same as the first:
     anaconda build submit .
     anaconda build tail -f USERNAME/conda_build_test 2
 
-`  <#InstallYourNewCondaPackage>`__
 
 Install your new conda package
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -240,12 +222,9 @@ depth example on how to use labels.
 
     conda install -c USERNAME/label/dev conda_build_test
 
-`  <#GithubBuilds>`__
 
 GitHub builds
 ~~~~~~~~~~~~~
-
-`  <#CreateAGitRepo>`__
 
 Create a git repo
 ^^^^^^^^^^^^^^^^^
@@ -265,7 +244,6 @@ First: `create a new github repository <https://github.com/new>`__
     git remote add origin https://github.com/GITHUB_USERNAME/conda_build_test.git
     git push -u origin master
 
-`  <#SubmitTheBuild>`__
 
 Submit the build
 ^^^^^^^^^^^^^^^^
@@ -277,7 +255,6 @@ github url.
 
     anaconda build submit https://github.com/GITHUB_USERNAME/conda_build_test
 
-`  <#SaveAndTriggerYourBuilds>`__
 
 Save and trigger your builds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -317,7 +294,6 @@ and centos distribution:
 
     anaconda build trigger USERNAME/conda_build_test --dist centos --branch master --queue USERNAME/QUEUENAME
 
-`  <#ContinuousIntegrationRunABuildOnGitPush>`__
 
 Continuous Integration: run a build on git push
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -374,7 +350,7 @@ Now, test that the web hook is correct by pushing an empty commit.
 
     git commit -m "Trigger build" --allow-emptygit push # This should give enough time to let github send the webhooksleep 10 anaconda build list-all USERNAME/conda_build_test
 
-| 
+|
 
 Bash
 
@@ -385,12 +361,9 @@ with your build.
 If ``anaconda trigger`` works, but the webhook still does not, go to
 github and inspect the webhook requests and responses.
 
-`  <#BuildConfiguration>`__
 
 Build configuration
 ===================
-
-`  <#ConfigurationFileTags>`__
 
 Configuration file tags
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -408,11 +381,10 @@ command or as a list.
 
     tag: single_command# ORtag:  - some_command  - another_command
 
-| 
+|
 
 YAML
 
-`  <#Script>`__
 
 script
 ^^^^^^
@@ -423,7 +395,7 @@ Define the main script to run on the build machine:
 
     script: echo "hello world!"
 
-| 
+|
 
 YAML
 
@@ -433,11 +405,9 @@ Script may also be a list:
 
     script:  - some_command  - another_command
 
-| 
+|
 
 YAML
-
-`  <#Before_ScriptAndAfter_Script>`__
 
 before\_script and after\_script
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -448,7 +418,7 @@ You can also define scripts to be run before and after the main script:
 
     before_script: some_commandafter_script:  another_command
 
-| 
+|
 
 YAML
 
@@ -456,7 +426,6 @@ For the ``after_script`` tag the environment variable
 `BINSTAR\_BUILD\_RESULT <#EnvironmentVariables>`__ will be made
 available as either *success* or *failure*.
 
-`  <#After_SuccessAndAfter_Failure>`__
 
 after\_success and after\_failure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -469,11 +438,9 @@ build was a success or a failure. **Build errors are not caught**.
 
     after_success:  - echo Yay!after_failure:  - echo Oops?
 
-| 
+|
 
 YAML
-
-`  <#Build_Targets>`__
 
 build\_targets
 ^^^^^^^^^^^^^^
@@ -494,11 +461,10 @@ Or a file or glob of files:
 
     build_targets: /opt/anaconda/my-package.tar.bz2
 
-| 
+|
 
 YAML
 
-`  <#Platform>`__
 
 platform
 ^^^^^^^^
@@ -517,7 +483,7 @@ queue </cli.html#Queue>`__ command:
 
     $ anaconda build queueUsing anaconda-server api site https://api.anaconda.org build/binstar/public           [] + Worker hostname:docker-2        platform:linux-64        dist:centos   - Id 54b57d3ee1dad10a4987f6cd   - Last seen 5 seconds ago   - binstar-build v0.10.3 (binstar v0.10.1) + Worker hostname:docker-2        platform:linux-64        dist:centos   - Id 54b989d1e1dad10da34074d6   - Last seen 10 seconds ago   - binstar-build v0.10.3 (binstar v0.10.1)
 
-| 
+|
 
 Bash
 
@@ -528,14 +494,13 @@ platforms:
 
     platform:  - linux-32  - linux-64  - osx-32  - osx-64  - win-32  - win-64
 
-| 
+|
 
 YAML
 
 The items in the ``platform`` tag describe the first of the three axes
 of the `build matrix <#BuildMatrix>`__.
 
-`  <#Engine>`__
 
 engine
 ^^^^^^
@@ -546,7 +511,7 @@ Sets the initial conda packages you want to build with:
 
     engine:  - python=2 nodejs=0.10  - python=3
 
-| 
+|
 
 YAML
 
@@ -559,7 +524,6 @@ the `build matrix <#BuildMatrix>`__.
 The environment variables CONDA\_PY and CONDA\_NPY are set based on the
 presence of Python or numpy in the engine tag.
 
-`  <#Env>`__
 
 env
 ^^^
@@ -570,14 +534,13 @@ An export of environment variables for the sub-build:
 
     env:  - FOO=BAR  - ANACONDA=GREAT JENKINS=OK
 
-| 
+|
 
 YAML
 
 The items in the ``env`` tag describe the third of the three axes of the
 `build matrix <#BuildMatrix>`__.
 
-`  <#Install_Channels>`__
 
 install\_channels
 ~~~~~~~~~~~~~~~~~
@@ -591,7 +554,7 @@ This shows the install\_channels configured for building R packages.
 
     install_channels:   - r   - defaults
 
-| 
+|
 
 YAML
 
@@ -605,11 +568,9 @@ depends on jsmith's private packages.
 
     install_channels:  - t/TOKEN/jsmith  - defaults
 
-| 
+|
 
 YAML
-
-`  <#Quiet>`__
 
 quiet
 ~~~~~
@@ -623,7 +584,7 @@ you can redact these messages by using the ``quiet`` key.
 
     Fetching packages ...    ncurses-5.9-1.   0% |                              | ETA:  --:--:--   0.00  B/s    ncurses-5.9-1.   2% |                               | ETA:  0:00:00  36.09 MB/s    ncurses-5.9-1.   4% |#                              | ETA:  0:00:00  54.15 MB/s    ncurses-5.9-1.   6% |##                             | ETA:  0:00:00  66.78 MB/s    ncurses-5.9-1.   9% |##                             | ETA:  0:00:00  76.02 MB/s
 
-| 
+|
 
 Text only
 
@@ -635,11 +596,10 @@ ends with ``\r``:
 
     quiet: True
 
-| 
+|
 
 YAML
 
-`  <#BuildMatrix>`__
 
 Build matrix
 ~~~~~~~~~~~~
@@ -657,7 +617,7 @@ The following configuration will run 8 sub builds:
 
     platform:  - linux-32  - linux-64engine:  - python=2  - python=3env:  - CXX=g++  - CXX=clang++
 
-| 
+|
 
 YAML
 
@@ -670,7 +630,6 @@ YAML
 #. platform: ``linux-32`` engine: ``python=3`` env: ``CXX=g++``
 #. platform: ``linux-32`` engine: ``python=3`` env: ``CXX=clang++``
 
-`  <#MultipleBuildMatrices>`__
 
 Multiple build matrices
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -682,7 +641,7 @@ if you are running a build on Windows, the matrix:
 
     platform:  - win-32  - linux-32env:  - MSVC=2008  - MSVC=2010  - CC=gccscript:    build.sh
 
-| 
+|
 
 YAML
 
@@ -698,13 +657,12 @@ Yaml documents are separated by ``---``.
 
     platform: linux-32env: CC=gccscript: build.sh--- # New Build Matrixplatform: win-32env:  - MSVC=2008  - MSVC=2010script: build.bat
 
-| 
+|
 
 YAML
 
 This would now produce the correct sub-builds.
 
-`  <#ExcludingAnItemInTheMatrix>`__
 
 Excluding an item in the matrix
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -715,14 +673,13 @@ You can exclude a sub-build entry from a matrix with the exclude tag.
 
     platform:  - linux-32  - linux-64engine:  - python=2  - python=3script: conda build .---platform: linux-32engine: python=3exclude: true
 
-| 
+|
 
 YAML
 
 Now the sub-build: ``platform: linux-32 engine: python=3`` will not be
 submitted.
 
-`  <#EnvironmentVariables>`__
 
 Environment variables
 ~~~~~~~~~~~~~~~~~~~~~
@@ -744,7 +701,6 @@ CONDA\_PY
 CONDA\_NPY
     The conda numpy version from the engine tag
 
-`  <#BuildWorkers>`__
 
 Build workers
 =============
@@ -770,7 +726,6 @@ machines. A build worker can run on any machine that supports bash
 To follow along with this tutorial, you will need to `install the build
 cli </using.html#InstallingAnacondaClientAndAnacondaBuild>`__.
 
-`  <#CreateABuildQueue>`__
 
 Create a build queue
 ~~~~~~~~~~~~~~~~~~~~
@@ -786,7 +741,7 @@ To create your queue run:
 
     anaconda build queue --create USERNAME/QUEUENAME
 
-| 
+|
 
 Bash
 
@@ -795,7 +750,6 @@ username and ``QUEUENAME`` is an alphanumeric name of your choice. For
 more information see `configuring your build
 queues <#ConfiguringBuildQueues>`__.
 
-`  <#LaunchingABuildWorker>`__
 
 Launching a build worker
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -814,7 +768,7 @@ the following command to set the configuration correctly:
 
     conda config --set always_yes true
 
-| 
+|
 
 Bash
 
@@ -827,7 +781,7 @@ id as the yaml filename.
 
     anaconda worker register USERNAME/QUEUE
 
-| 
+|
 
 Bash
 
@@ -837,7 +791,7 @@ To see other options for registering workers, try
 
     anaconda worker register --help
 
-| 
+|
 
 Bash
 
@@ -848,7 +802,7 @@ worker. This command will start a worker with a ``worker_id``:
 
     anaconda worker run <worker-id-from-register-step>
 
-| 
+|
 
 Bash
 
@@ -859,7 +813,7 @@ worker will pick it up and build it:
 
     anaconda build submit ./my-build --queue USERNAME/QUEUENAME
 
-| 
+|
 
 Bash
 
@@ -876,7 +830,7 @@ with:
 
     anaconda worker deregister <worker-id-from-register-step>
 
-| 
+|
 
 Bash
 
@@ -888,7 +842,7 @@ workers you have registered with this command:
 
     anaconda worker list
 
-| 
+|
 
 Bash
 
@@ -899,7 +853,7 @@ current hostname:
 
     anaconda worker list --this-host-only
 
-| 
+|
 
 Bash
 
@@ -910,7 +864,7 @@ one of these commands:
 
     anaconda worker list --queue USERNAME/QUEUE
 
-| 
+|
 
 Bash
 
@@ -920,7 +874,7 @@ Or:
 
     anaconda worker list --org ORGNAME
 
-| 
+|
 
 Bash
 
@@ -930,11 +884,10 @@ Review all help for register, run, deregister, and list with:
 
     anaconda worker -h
 
-| 
+|
 
 Bash
 
-`  <#RunningWorkersInTheBackground>`__
 
 Running workers in the background
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -944,7 +897,6 @@ system <https://github.com/Anaconda-Server/chalmers>`__ can be used to
 run build workers in the background across all platforms. Please see the
 readme file in that repository for further information.
 
-`  <#ConfiguringBuildQueues>`__
 
 Configuring build queues
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -959,7 +911,7 @@ queue. You may change this in two ways:
 
        anaconda build submit ./my-build --queue USERNAME/QUEUENAME
 
-   | 
+   |
 
    Bash
 
@@ -969,7 +921,6 @@ queue. You may change this in two ways:
    and clicking the **Set as Default** option for the queue you would
    like to use.
 
-`  <#ShareYourBuildQueue>`__
 
 Share your build queue
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -989,7 +940,6 @@ To share access to your queue:
 #. Add the user by name (individual accounts) or by group (organization
    accounts).
 
-`  <#SecurityConsiderations>`__
 
 Security considerations
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -1006,7 +956,6 @@ We recommend you:
    make sure users cannot accidentally change the state of your build
    machine.
 
-`  <#ExecutingBuildsInADockerContainer>`__
 
 Executing builds in a Docker container
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1018,7 +967,7 @@ container::
 
     docker pull binstar/linux-64    anaconda worker register USERNAME/QUEUENAME    # prints worker-id  anaconda worker docker_run <worker-id> --image binstar/linux-64
 
-| 
+|
 
 Bash
 

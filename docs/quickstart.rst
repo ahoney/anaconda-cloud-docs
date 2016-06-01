@@ -2,12 +2,8 @@
 Quickstart
 ==========
 
-`  <#FindDownloadAndInstallPackages>`__
-
 Find, download and install packages
 ===================================
-
-`  <#SearchForAPublicPackage>`__
 
 Search for a public package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -25,7 +21,6 @@ others.
 #. Packages that match your search string are displayed. Click the
    package name to see more information.
 
-`  <#RefineYourSearchResults>`__
 
 Refine your search results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,7 +38,6 @@ specific platform.
 
 "Noarch" packages are built to work on all platforms.
 
-`  <#DownloadAndInstallAPackageFromAnacondaCloud>`__
 
 Download and install a package from Anaconda Cloud
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,7 +65,6 @@ or `configure
 conda <http://conda.pydata.org/docs/config.html#set-a-channel-alias-channel-alias>`__
 to use their local installation.
 
-`  <#BuildAndUploadPackages>`__
 
 Build and upload packages
 =========================
@@ -132,7 +125,6 @@ and upload your newly built test package to your Anaconda Cloud account:
 For detailed information, see the `Conda
 packages <using.html#CondaPackages>`__ section.
 
-`  <#ShareNotebooks>`__
 
 Share notebooks
 ===============
@@ -156,7 +148,6 @@ Anyone can download it:
 
     anaconda download username/my-notebook
 
-`  <#ShareEnvironments>`__
 
 Share environments
 ==================

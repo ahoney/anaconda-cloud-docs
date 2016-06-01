@@ -2,17 +2,11 @@
 Using Anaconda Cloud
 ====================
 
-`  <#GettingStarted>`__
-
 Getting started
 ===============
 
-`  <#Overview>`__
-
 Overview
 ~~~~~~~~
-
-`  <#InstallingAnacondaClientAndAnacondaBuild>`__
 
 Installing anaconda-client and anaconda-build
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,12 +54,9 @@ gcc-c++, git, and subversion:
 
     yum install -y tar bzip2 ntp chrpath wget dos2unix patch gcc gcc-c++ git subversion
 
-`  <#Packages>`__
 
 Packages
 ========
-
-`  <#Namespaces>`__
 
 Namespaces
 ~~~~~~~~~~
@@ -94,7 +85,6 @@ you must use their corresponding subdomains:
    url
    `https://\ **pypi**.anaconda.org/conda <https://pypi.anaconda.org/conda>`__
 
-`  <#Labels>`__
 
 Labels
 ~~~~~~
@@ -131,12 +121,9 @@ with a channel and a label:
      conda install —-channel sean selenium
      conda install —-channel sean/label/dev selenium
 
-`  <#CondaPackages>`__
 
 Conda packages
 ~~~~~~~~~~~~~~
-
-`  <#Uploading>`__
 
 Uploading
 ^^^^^^^^^
@@ -199,7 +186,6 @@ packages <http://conda.pydata.org/docs/building/bpp.html>`__ and
 build <http://conda.pydata.org/docs/build_tutorials.html>`__ for more
 information on conda's overall build framework.
 
-`  <#Installing>`__
 
 Installing
 ^^^^^^^^^^
@@ -223,12 +209,9 @@ package <https://anaconda.org/sean/testci>`__:
 
       conda install testci
 
-`  <#PypiPackages>`__
 
 PyPI packages
 ~~~~~~~~~~~~~
-
-`  <#UploadingPypiPackages>`__
 
 Uploading PyPI packages
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -259,7 +242,6 @@ uploaded:
 Your package is now available at
 ``http://anaconda.org/USERNAME/PACKAGE``.
 
-`  <#InstallingPypiPackages>`__
 
 Installing PyPI packages
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -271,7 +253,6 @@ we will use the package we authored in the examples above.
 
       pip install --extra-index-url https://pypi.anaconda.org/USERNAME/simple pypi-test-package
 
-`  <#InstallingPrivatePypiPackages>`__
 
 Installing private PyPI packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -284,7 +265,6 @@ private packages:
       TOKEN=$(anaconda auth --create --name YOUR-TOKEN-NAME)
       pip install --index-url https://pypi.anaconda.org/t/$TOKEN/USERNAME/simple test-package
 
-`  <#PrivatePackages>`__
 
 Private packages
 ~~~~~~~~~~~~~~~~
@@ -305,7 +285,6 @@ packages in the travis **user namespace**.
    repository url
    `https://\ **pypi**.anaconda.org/t/<TOKEN>/travis <https://pypi.anaconda.org/travis>`__
 
-`  <#Tokens>`__
 
 Tokens
 ~~~~~~
@@ -315,7 +294,6 @@ collections, or packages on Anaconda Cloud. Additionally, the degree of
 access a token grants is completely configurable at the time of
 generation.
 
-`  <#GeneratingTokens>`__
 
 Generating tokens
 ^^^^^^^^^^^^^^^^^
@@ -336,7 +314,6 @@ can be enabled with the ``conda config`` command:
 
       conda config --add channels https://conda.anaconda.org/t/TOKEN/USERNAME
 
-`  <#PackagePrivacySettings>`__
 
 Package privacy settings
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -351,7 +328,6 @@ You will be prompted with two options:
    repository; however, you control the list of authorized users that
    will be able to access or modify this package.
 
-`  <#UploadingPackages>`__
 
 Uploading packages
 ~~~~~~~~~~~~~~~~~~
@@ -377,7 +353,6 @@ Your package can be also downloaded by anyone using the Anaconda CLI:
 
       anaconda download USERNAME/PACKAGENAME
 
-`  <#UploadingOtherTypesOfFiles>`__
 
 Uploading other types of files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -408,7 +383,6 @@ can be uploaded with the Anaconda CLI by using these steps.
 
        anaconda upload --package baby-names --package-type file --version 1 baby-names1.csv
 
-`  <#DownloadingOtherTypesOfFiles>`__
 
 Downloading other types of files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -422,7 +396,6 @@ Your file can also be downloaded by anyone using the Anaconda CLI:
 
         anaconda download USERNAME/baby-names
 
-`  <#RemoveAPastVersionOfAPackage>`__
 
 Remove a past version of a package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -449,7 +422,6 @@ user name, package name, and version.
 The change can now be seen on your profile page:
 ``https://anaconda.org/<USERNAME>/<PACKAGE>``
 
-`  <#DeleteAPackage>`__
 
 Delete a package
 ~~~~~~~~~~~~~~~~
@@ -477,7 +449,6 @@ package name.
 The change can now be seen on your profile page:
 ``https://anaconda.org/<USERNAME>``
 
-`  <#Notebooks>`__
 
 Notebooks
 =========
@@ -501,7 +472,6 @@ Anyone can download it:
 
     anaconda download username/my-notebook
 
-`  <#Environments>`__
 
 Environments
 ============
@@ -528,14 +498,12 @@ Anyone can download and install your environment from Anaconda Cloud:
     conda env create user/my-environemnt
     source activate my-environment
 
-`  <#Organizations>`__
 
 Organizations
 =============
 
 Organizations enable you to maintain group-owned repositories.
 
-`  <#CreatingOrganizations>`__
 
 Creating organizations
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -543,7 +511,6 @@ Creating organizations
 To create organizations, click the grid icon at the top of the page,
 select "Organizations", and use the form at the bottom of that page.
 
-`  <#ManagingOrganizations>`__
 
 Managing organizations
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -567,7 +534,6 @@ You can manage your organization's settings by navigating to:
 Or by navigating to `your settings <https://anaconda.org/settings>`__
 and selecting the organization dropdown on the upper right.
 
-`  <#AddingAnotherOwnerToYourOrganization>`__
 
 Adding another owner to your organization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -586,7 +552,6 @@ choose "owners", type their names into the text box, and choose "add":
 
 |Org owners page|
 
-`  <#UploadingPackagesToAnOrganization>`__
 
 Uploading packages to an organization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -597,7 +562,6 @@ To upload a package to an organization, use the ``-u/--user`` option:
 
     anaconda upload --user USERNAME package.tar.bz2
 
-`  <#UsingLabelsInTheDevelopmentCycle>`__
 
 Using labels in the development cycle
 =====================================
