@@ -30,11 +30,8 @@ To install a conda package, in your terminal window run:
 Conda expands "username" to a URL such as
 "https://anaconda.org/username" or "https://conda.anaconda.org/username"
 based on the settings in the .condarc file. Anaconda Cloud users can use
-the defaults, and Anaconda Enterprise repository users can `configure
-the
-repository <https://docs.continuum.io/anaconda-repository/configuration>`__
-or `configure
-conda <http://conda.pydata.org/docs/config.html#set-a-channel-alias-channel-alias>`__
+the defaults, and Anaconda Enterprise repository users can :doc:`configure the repository </anaconda-repository/configuration>` 
+or `configure conda <http://conda.pydata.org/docs/config.html#set-a-channel-alias-channel-alias>`__
 to use their local installation.
 
 
@@ -57,8 +54,8 @@ Install anaconda-client
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 The anaconda-client command line interface (CLI) is available via conda
-or pip. See `installation and setup
-instructions </using.html#InstallingAnacondaClientAndAnacondaBuild>`__.
+or pip. See :ref:`installation and setup
+instructions <installing-anaconda-client-and-anaconda-build>`.
 
 
 Find my anaconda-client login credentials
@@ -143,9 +140,9 @@ Build packages
 Build and upload a package
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-See the `Anaconda Cloud Build Guide </build.html>`__ for step-by-step
-instructions. For a quick run-through, try the Quickstart `build guide
-section </quickstart.html#BuildAndUploadPackages>`__.
+See the :doc:`Anaconda Cloud Build Guide <build>` for step-by-step
+instructions. For a quick run-through, try the Quickstart :ref:`build guide
+section <quickstart-build-upload>`.
 
 `  <#TestABuiltPackage>`__
 
@@ -291,8 +288,7 @@ How do I get started with Anaconda Cloud?
 You can search, download and install hundreds of public packages without
 even having an account. If you wish to build and upload packages, you
 will need to sign up for an `Anaconda Cloud
-account <https://anaconda.org/>`__. See our `Using Anaconda Cloud
-section </using.html>`__ for more help.
+account <https://anaconda.org/>`__. See our :doc:`using` section for more help.
 
 `  <#WhatKindOfAccountDoIHave>`__
 
@@ -558,7 +554,7 @@ Source package
 platform, and might be compatible with all, some, or only one of the
 platforms.
 
-`  <#Token>`__
+.. _reference-token:
 
 Token
 ~~~~~
