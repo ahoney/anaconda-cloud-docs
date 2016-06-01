@@ -266,7 +266,7 @@ want to save your build configuration, especially if you are using
 ``--label``, ``--queue`` or ``--email``.
 
 You can :ref:`cli-save` these options to Anaconda Cloud and
-:ref:`cli-trigger>` them later.
+:ref:`cli-trigger` them later.
 
 Note: Using the anaconda build save command affects the Continuous
 Integration (CI) section of the package settings on Anaconda Cloud. For
@@ -907,7 +907,7 @@ Configuring build queues
 By default your build worker will run builds on your ``binstar/public``
 queue. You may change this in two ways:
 
-#. Use the ``--queue`` option when issuing a ``anaconda build`` :doc:`submit,
+#. Use the ``--queue`` option when issuing a ``anaconda build`` :ref:`submit,
    save or trigger <submitting-builds>` command:
 
    ::
