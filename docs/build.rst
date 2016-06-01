@@ -525,7 +525,7 @@ Note that the first item ``python=2 nodejs=0.10`` is not a list. In this
 build item both packages python and nodejs will be available.
 
 The items in the ``engine`` tag describe the second of the three axes of
-the :ref:`build matrix`.
+the :ref:`build-matrix`.
 
 The environment variables CONDA\_PY and CONDA\_NPY are set based on the
 presence of Python or numpy in the engine tag.
@@ -546,7 +546,7 @@ An export of environment variables for the sub-build:
 YAML
 
 The items in the ``env`` tag describe the third of the three axes of the
-:ref:`build matrix`.
+:ref:`build-matrix`.
 
 
 install\_channels
