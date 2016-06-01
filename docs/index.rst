@@ -1,10 +1,6 @@
-:orphan:
-
 ===============
 Anaconda Cloud
 ===============
-
-`  <#WhatIsAnacondaCloud>`__
 
 What is Anaconda Cloud?
 ~~~~~~~~~~~~~~~~~~~~~~~

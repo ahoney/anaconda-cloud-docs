@@ -2,17 +2,11 @@
 Reference
 =========
 
-`  <#HowTo>`__
-
 How To...
 =========
 
-`  <#UsePackages>`__
-
 Use packages
 ~~~~~~~~~~~~
-
-`  <#FindAPackage>`__
 
 Find a package
 ^^^^^^^^^^^^^^
@@ -23,7 +17,6 @@ the search box. You can filter your searches to specify only conda or
 PyPI packages, and you can sort results by number of favorites or number
 of downloads by clicking the search results column heading.
 
-`  <#DownloadAndInstallAPackageFromAnacondaCloud>`__
 
 Download and install a package from Anaconda Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -44,7 +37,7 @@ or `configure
 conda <http://conda.pydata.org/docs/config.html#set-a-channel-alias-channel-alias>`__
 to use their local installation.
 
-`  <#DownloadAndInstallAPypiPackageFromAnacondaCloud>`__
+
 
 Download and install a PyPI package from Anaconda Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -55,12 +48,10 @@ To install a PyPI package, in your terminal window run:
 
     pip install --index-url pypi.anaconda.org/USERNAME/simple packagename
 
-`  <#UseTheAnacondaClientCli>`__
 
 Use the anaconda-client CLI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`  <#InstallAnacondaClient>`__
 
 Install anaconda-client
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -69,7 +60,6 @@ The anaconda-client command line interface (CLI) is available via conda
 or pip. See `installation and setup
 instructions </using.html#InstallingAnacondaClientAndAnacondaBuild>`__.
 
-`  <#FindMyAnacondaClientLoginCredentials>`__
 
 Find my anaconda-client login credentials
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -2,8 +2,6 @@
 Get Involved
 ============
 
-`  <#CommunitySupport>`__
-
 Community support
 =================
 
@@ -14,15 +12,11 @@ and
 ask questions, answer questions, and discuss ways to use Anaconda Cloud,
 requests for new features, and any other comments you may have.
 
-`  <#Support>`__
-
 Support
 =======
 
 For support issues, please see `Anaconda Cloud
 Support <https://www.continuum.io/support>`__.
-
-`  <#ReportABug>`__
 
 Report a bug
 ============
@@ -31,8 +25,6 @@ Issues with Anaconda Cloud are tracked on
 `GitHub <https://github.com/Anaconda-Platform/support/issues>`__. If you
 think you have found a bug, please search to see if it has been
 reported, and please report it if no one else has.
-
-`  <#ContributeToTheDocs>`__
 
 Contribute to the docs
 ======================
