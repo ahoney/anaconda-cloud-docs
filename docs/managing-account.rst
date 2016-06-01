@@ -70,7 +70,7 @@ From left to right, the user toolbar options are:
 Packages that you have created with this account appear on your
 Dashboard. There’s a handy button to create a new package.
 
-See Also: `Working with Packages </using.html#Packages>`__
+See Also: :ref:`Working with Packages <using-packages>`
 
 
 Reset password

@@ -12,8 +12,8 @@ Search for a public package
 Python packages for a wide variety of applications. You don't need an
 Anaconda Cloud account, or to be logged in, to search for public
 packages, download and install them. You need an account only to access
-`private packages <using.html#PrivatePackages>`__ without a
-`token <using.html#Tokens>`__, or to build and share your packages with
+:ref:`private packages <using-private-packages>` without a
+:ref:`token <using-tokens>`, or to build and share your packages with
 others.
 
 #. In the top search box, type part or all of the name of a program you
@@ -63,6 +63,7 @@ repository users can :doc:`configure the repository </anaconda-repository/config
 or `configure conda <http://conda.pydata.org/docs/config.html#set-a-channel-alias-channel-alias>`__
 to use their local installation.
 
+.. _quickstart-build-upload:
 
 Build and upload packages
 =========================
@@ -120,8 +121,7 @@ and upload your newly built test package to your Anaconda Cloud account:
       anaconda login
       anaconda upload /your/path/conda-package.tar.bz2
 
-For detailed information, see the `Conda
-packages <using.html#CondaPackages>`__ section.
+For detailed information, see the :ref:`using-conda-packages` section.
 
 
 Share notebooks

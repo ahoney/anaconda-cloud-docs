@@ -397,6 +397,8 @@ Anaconda Cloud package utilities
     authorized and authenticated access to install
 
 
+.. _cli-upload:
+
 upload
 ^^^^^^
 
@@ -578,36 +580,36 @@ Anaconda build client for continuous integration, testing and building packages
 
 | **Commands:**
 
-`backlog <cli.html#Backlog>`__
+backlog
     Run a build worker to build jobs off of a anaconda build queue
-`build <cli.html#Build>`__
+build
     Anaconda build client for continuous integration, testing and
     building packages
-`init <cli.html#Init>`__
+init
     Initialize Build file
-`keyfile <cli.html#Keyfile>`__
+keyfile
     [Advanced] Not documented yet
-`keyfiles <cli.html#Keyfiles>`__
+keyfiles
     [Advanced] Not documented yet
-`list <cli.html#List>`__
+list
     list the builds for package
-`list-all <cli.html#List-All>`__
+list-all
     list the builds for package
-`queue <cli.html#Queue>`__
+queue
     Inspect build queue
-`resubmit <cli.html#Resubmit>`__
+resubmit
     Resubmit build
-`results <cli.html#Results>`__
+results
     [Advanced] Attach results to build
-`save <cli.html#Save>`__
+save
     Save build info to be triggered later
-`submit <cli.html#Submit>`__
+submit
     Submit a directory or github repo for building
-`tail <cli.html#Tail>`__
+tail
     Tail the build output of build number X.Y
-`trigger <cli.html#Trigger>`__
+trigger
     Trigger a build that has been saved
-`worker <cli.html#Worker>`__
+worker
     Anaconda build client for continuous integration, testing and
     building packages
 
@@ -623,15 +625,14 @@ To get started with anaconda build run:
 
 See also:
 
--  `Anaconda Build </building.html>`__
+-  :doc:`build`
 
-| 
-| `  <cli.html#SubmittingBuilds>`__
+.. _submitting-builds:
 
 Submitting Builds
 ~~~~~~~~~~~~~~~~~
 
-`  <cli.html#Submit>`__
+.. _cli-submit:
 
 submit
 ^^^^^^
@@ -712,12 +713,12 @@ Submit a build from your local path or via a git url:
 
 See also:
 
--  `Submit A Build </build.html#SubmitABuild>`__
--  `Submit A Build From Github </build.html#GithubBuilds>`__
+-  :ref:`submit-a-build`
+-  :ref:`Submit A Build From Github <github-builds>`
 
 | 
 
-`  <cli.html#Save>`__
+.. _cli-save:
 
 save
 ^^^^
@@ -760,12 +761,11 @@ Save build info to be triggered later
 
 See also:
 
--  `Save and Trigger Your
-   Builds </build.html#SaveAndTriggerYourBuilds>`__
+-  :ref:`save-and-trigger-builds`
 
 | 
 
-`  <cli.html#Trigger>`__
+.. _cli-trigger:
 
 trigger
 ^^^^^^^
@@ -827,16 +827,12 @@ Trigger a build that has been saved
 
 See also:
 
--  `Save and Trigger Your
-   Builds </build.html#SaveAndTriggerYourBuilds>`__
-
-| 
-| `  <cli.html#HostingBuildMachines>`__
+-  :ref:`save-and-trigger-builds`
 
 Hosting Build machines
 ~~~~~~~~~~~~~~~~~~~~~~
 
-`  <cli.html#Queue>`__
+.. _cli-queue:
 
 queue
 ^^^^^
@@ -861,8 +857,6 @@ USERNAME/QUEUENAME
 
 | 
 
-`  <cli.html#Worker>`__
-
 worker
 ^^^^^^
 
@@ -875,16 +869,16 @@ None
 
 | **Commands:**
 
-`deregister <cli.html#Deregister>`__
+deregister
     Deregister a build worker to build jobs off of a binstar build queue
-`docker\_run <cli.html#Docker_Run>`__
+docker_run
     Run a build worker in a docker container to build jobs off of a
     binstar build queue
-`list <cli.html#List>`__
+list
     List build workers and queues
-`register <cli.html#Register>`__
+register
     Register a build worker to build jobs off of a binstar build queue
-`run <cli.html#Run>`__
+run
     Run a build worker to build jobs off of a binstar build queue
 
 | 
@@ -899,11 +893,9 @@ To get started with anaconda worker run:
 
 See also:
 
--  `Anaconda Build </build-config.html#BuildWorkers>`__
+-  :ref:`Anaconda Build <build-workers>`
 
 | 
-
-`  <cli.html#DockerWorker>`__
 
 docker-worker
 ^^^^^^^^^^^^^

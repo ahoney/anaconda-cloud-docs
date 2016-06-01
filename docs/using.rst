@@ -8,6 +8,8 @@ Getting started
 Overview
 ~~~~~~~~
 
+.. _installing-anaconda-client-and-anaconda-build:
+
 Installing anaconda-client and anaconda-build
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -54,6 +56,7 @@ gcc-c++, git, and subversion:
 
     yum install -y tar bzip2 ntp chrpath wget dos2unix patch gcc gcc-c++ git subversion
 
+.. _using-packages:
 
 Packages
 ========
@@ -74,8 +77,8 @@ NOTE: All packages are public if uploaded by users of free accounts.
 Packages may be designated as private by upgrading to a paid account.
 
 Anaconda Cloud supports two package managers,
-`conda <using.html#CondaPackages>`__ and
-`PyPI <using.html#PypiPackages>`__. To work with conda or PyPI packages,
+:ref:`conda <using-conda-packages>` and
+:ref:`PyPI <using-pypi-packages>`. To work with conda or PyPI packages,
 you must use their corresponding subdomains:
 
 -  To install **conda** packages from the conda user, use the repository
@@ -121,6 +124,7 @@ with a channel and a label:
      conda install —-channel sean selenium
      conda install —-channel sean/label/dev selenium
 
+.. _using-conda-packages:
 
 Conda packages
 ~~~~~~~~~~~~~~
@@ -174,8 +178,8 @@ directory. You can check where the resulting file was placed with the
 
       conda build . --output
 
-Now upload the test package to Anaconda Cloud with the `anaconda
-upload <cli.html#Upload>`__ command:
+Now upload the test package to Anaconda Cloud with the :ref:`anaconda
+upload <cli-upload>` command:
 
 ::
 
@@ -211,6 +215,7 @@ package <https://anaconda.org/sean/testci>`__:
 
       conda install testci
 
+.. _using-pypi-packages:
 
 PyPI packages
 ~~~~~~~~~~~~~
@@ -269,14 +274,15 @@ private packages:
       TOKEN=$(anaconda auth --create --name YOUR-TOKEN-NAME)
       pip install --index-url https://pypi.anaconda.org/t/$TOKEN/USERNAME/simple test-package
 
+.. _using-private-packages:
 
 Private packages
 ~~~~~~~~~~~~~~~~
 
 Packages may be private. This means that a user must explicitly have
 access to view the package. To view and install private packages, you
-must identify yourself to Anaconda Cloud. This is done with `access
-tokens <using.html#Tokens>`__. Once you have generated a token
+must identify yourself to Anaconda Cloud. This is done with :ref:`access
+tokens <using-tokens>`. Once you have generated a token
 (``<TOKEN>``), you may prefix any repository url with ``/t/<TOKEN>``
 
 Note: This is just an example. You will not see any extra private
@@ -338,8 +344,8 @@ Uploading packages
 ~~~~~~~~~~~~~~~~~~
 
 To easily upload package files to Anaconda Cloud use the
-`anaconda-client <cli.html>`__ command line interface and the
-`upload <cli.html#Upload>`__ command:
+:doc:`anaconda-client <cli>` command line interface and the
+:ref:`upload <cli-upload>` command:
 
 ::
 
@@ -367,7 +373,7 @@ files to Anaconda Cloud. In this example we will upload a spreadsheet
 named baby-names in comma separated value (CSV) format. Any type of file
 can be uploaded with the Anaconda CLI by using these steps.
 
-#. Use the `anaconda-client <cli.html>`__ command line interface to
+#. Use the :doc:`anaconda-client <cli>` command line interface to
    create a new namespace for your file on Anaconda Cloud:
 
    ::
@@ -415,7 +421,7 @@ To remove a past version of one of your packages from Anaconda Cloud:
 
 #. Click the "Actions" menu and then "Remove".
 
-You may instead use the `command line interface <cli.html>`__:
+You may instead use the :doc:`command line interface <cli>`:
 
 ::
 
@@ -442,7 +448,7 @@ versions:
 
 #. Click "Delete".
 
-You may instead use the `command line interface <cli.html>`__:
+You may instead use the :doc:`command line interface <cli>`:
 
 ::
 
@@ -509,6 +515,7 @@ Organizations
 
 Organizations enable you to maintain group-owned repositories.
 
+.. _creating-orgs:
 
 Creating organizations
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -567,6 +574,7 @@ To upload a package to an organization, use the ``-u/--user`` option:
 
     anaconda upload --user USERNAME package.tar.bz2
 
+.. _using-labels-in-the-development-cycle:
 
 Using labels in the development cycle
 =====================================
@@ -600,7 +608,7 @@ conda package. Before you build the package edit the version in the
     conda build .
 
 Now, upload your test package to Anaconda Cloud using the
-`anaconda-client upload <cli.html#Upload>`__ command.
+:ref:`anaconda-client upload <cli-upload>` command.
 
 Adding the ``--label`` option tells Anaconda Cloud to make the upload
 visible only to users who specify that label.

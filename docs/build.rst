@@ -113,7 +113,7 @@ Before using the Anaconda Build System:
    queues, at
    `anaconda.org/new/organization <https://anaconda.org/new/organization>`__
 
-
+.. _submit-a-build:
 
 Submit a build
 ~~~~~~~~~~~~~~
@@ -214,14 +214,14 @@ Install your new conda package
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default Anaconda Cloud puts all new packages in a ``dev`` label in
-your account. See `Using labels in the development
-cycle <using.html#UsingLabelsInTheDevelopmentCycle>`__ for a more in
+your account. See :ref:`using-labels-in-the-development-cycle` for a more in
 depth example on how to use labels.
 
 ::
 
     conda install -c USERNAME/label/dev conda_build_test
 
+.. _github-builds:
 
 GitHub builds
 ~~~~~~~~~~~~~
@@ -255,17 +255,18 @@ github url.
 
     anaconda build submit https://github.com/GITHUB_USERNAME/conda_build_test
 
+.. _save-and-trigger-builds:
 
 Save and trigger your builds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once you have `submitted a build from github <#GithubBuilds>`__ you may
 want to save your build configuration, especially if you are using
-`extra options </cli.html#Submit>`__ like ``-p``, ``--sub-dir``,
+:ref:`extra options <cli-submit>` like ``-p``, ``--sub-dir``,
 ``--label``, ``--queue`` or ``--email``.
 
-You can `save </cli.html#Save>`__ these options to Anaconda Cloud and
-`trigger </cli.html#Trigger>`__ them later.
+You can :ref:`cli-save` these options to Anaconda Cloud and
+:ref:`cli-trigger>` them later.
 
 Note: Using the anaconda build save command affects the Continuous
 Integration (CI) section of the package settings on Anaconda Cloud. For
@@ -446,8 +447,8 @@ build\_targets
 ^^^^^^^^^^^^^^
 
 These files will be uploaded to your Anaconda Cloud package. These are
-files that will be uploaded to Anaconda Cloud with `anaconda
-upload </cli.html#Upload>`__.
+files that will be uploaded to Anaconda Cloud with :ref:`anaconda
+upload <cli-upload>`.
 
 You may use the key words ``conda`` or ``pypi``:
 
@@ -476,8 +477,8 @@ available for public use on Anaconda Cloud. You can `add your own build
 workers <#LaunchingABuildWorker>`__ if you need access to additional
 platforms.
 
-To see which platforms are available to you, issue the `anaconda build
-queue </cli.html#Queue>`__ command:
+To see which platforms are available to you, issue the :ref:`anaconda build
+queue <cli-queue>` command:
 
 ::
 
@@ -559,7 +560,7 @@ This shows the install\_channels configured for building R packages.
 YAML
 
 If private packages are required in your build, make sure to include a
-`token <reference.html#Token>`__ in the channel configuration.
+:ref:`token <reference-token>` in the channel configuration.
 
 This shows the install\_channels configured for building a package that
 depends on jsmith's private packages.
@@ -702,6 +703,8 @@ CONDA\_NPY
     The conda numpy version from the engine tag
 
 
+.. _build-workers:
+
 Build workers
 =============
 
@@ -715,16 +718,16 @@ Cloud <http://anaconda.org>`__ provides free linux-64 workers. If you do
 **not** need to build for other platforms, you can complete package
 builds using only `Anaconda Cloud <http://anaconda.org>`__. Further, all
 Anaconda Cloud accounts allow you to attach one free worker. If you need
-more workers or workers on other platforms, you will need to `create an
-organization </using.html#CreatingOrganizations>`__ and `upgrade to a
+more workers or workers on other platforms, you will need to :ref:`create an
+organization <creating-orgs>` and `upgrade to a
 paid plan <https://anaconda.org/about/pricing>`__.
 
 Anaconda build workers allow you to run your builds on your own
 machines. A build worker can run on any machine that supports bash
 (posix) or batch (win32).
 
-To follow along with this tutorial, you will need to `install the build
-cli </using.html#InstallingAnacondaClientAndAnacondaBuild>`__.
+To follow along with this tutorial, you will need to :ref:`install the build
+cli <installing-anaconda-client-and-anaconda-build>`.
 
 
 Create a build queue
@@ -904,8 +907,8 @@ Configuring build queues
 By default your build worker will run builds on your ``binstar/public``
 queue. You may change this in two ways:
 
-#. Use the ``--queue`` option when issuing a ``anaconda build`` `submit,
-   save or trigger <cli.html#SubmittingBuilds>`__ command:
+#. Use the ``--queue`` option when issuing a ``anaconda build`` :doc:`submit,
+   save or trigger <submitting-builds>` command:
 
    ::
 
