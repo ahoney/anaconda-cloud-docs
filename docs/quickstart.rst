@@ -59,10 +59,8 @@ EXAMPLE: To download and install a package with conda, run:
 Conda expands "username" to a URL such as
 "https://anaconda.org/username" based on the settings in the .condarc
 file. Anaconda Cloud users can use the defaults, and Anaconda Enterprise
-repository users can `configure the
-repository <https://docs.continuum.io/anaconda-repository/configuration>`__
-or `configure
-conda <http://conda.pydata.org/docs/config.html#set-a-channel-alias-channel-alias>`__
+repository users can :doc:`configure the repository </anaconda-repository/configuration>` 
+or `configure conda <http://conda.pydata.org/docs/config.html#set-a-channel-alias-channel-alias>`__
 to use their local installation.
 
 

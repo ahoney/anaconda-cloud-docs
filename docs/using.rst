@@ -125,6 +125,8 @@ with a channel and a label:
 Conda packages
 ~~~~~~~~~~~~~~
 
+.. _uploading-conda-packages:
+
 Uploading
 ^^^^^^^^^
 
@@ -164,7 +166,7 @@ command:
       conda build .
 
 All packages built in this way are placed in a subdirectory of
-`Anaconda's <http://docs.continuum.io/anaconda/index>`__ *conda-bld*
+:doc:`Anaconda's </anaconda/index>` *conda-bld*
 directory. You can check where the resulting file was placed with the
 ``--output`` option:
 
@@ -212,6 +214,8 @@ package <https://anaconda.org/sean/testci>`__:
 
 PyPI packages
 ~~~~~~~~~~~~~
+
+.. _uploading-pypi-packages:
 
 Uploading PyPI packages
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -285,6 +289,7 @@ packages in the travis **user namespace**.
    repository url
    `https://\ **pypi**.anaconda.org/t/<TOKEN>/travis <https://pypi.anaconda.org/travis>`__
 
+.. _using-tokens:
 
 Tokens
 ~~~~~~

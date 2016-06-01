@@ -148,8 +148,7 @@ Manage Authentication tokens
 
 See also:
 
--  `Using Anaconda Cloud
-   Tokens <http://docs.anaconda.org/using.html#Tokens>`__
+-  :ref:`Using Anaconda Cloud Tokens <using-tokens>`
 
 
 login
@@ -475,10 +474,8 @@ Upload packages to Anaconda Cloud
 See Also
 ''''''''
 
--  `Uploading a Conda
-   Package <http://docs.anaconda.org/using.html#Uploading>`__
--  `Uploading a PyPI
-   Package <http://docs.anaconda.org/using.html#UploadingPypiPackages>`__
+-  :ref:`Uploading a Conda Package <uploading-conda-packages>`
+-  :ref:`Uploading a PyPI Package <uploading-pypi-packages>`
 
 
 label
