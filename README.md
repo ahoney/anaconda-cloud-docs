@@ -1,1 +1,1 @@
-Source code for Anaconda Cloud documentation at http://docs.continuum.io/anaconda-cloud
+Source code for Anaconda Cloud documentation at http://docs.continuum.io/anaconda-cloud . Merged with other sources, built, and deployed according to Makefiles and readme file at https://github.com/ContinuumIO/docs .
