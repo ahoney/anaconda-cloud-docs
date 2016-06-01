@@ -53,37 +53,37 @@ Anaconda Cloud command line manager
 
 **Commands:**
 
-`auth <#Auth>`__
+auth
     Manage Authorization Tokens
-`channel <#Channel>`__
+channel
     [DEPRECATED in favor of label] Manage your Anaconda Cloud channels
-`config <#Config>`__
+config
     Binstar configuration
-`copy <#Copy>`__
+copy
     Copy packages from one account to another
-`download <#Download>`__
+download
     Download notebooks from Anaconda Cloud
-`groups <#Groups>`__
+groups
     Manage Groups
-`label <#Label>`__
+label
     Manage your Anaconda Cloud labels
-`login <#Login>`__
+login
     Authenticate a user
-`logout <#Logout>`__
+logout
     Log out from Anaconda Cloud
-`notebook <#Notebook>`__
+notebook
     Interact with notebooks in anaconda.org
-`package <#Package>`__
+package
     Package utils
-`remove <#Remove>`__
+remove
     Remove an object from Anaconda Cloud
-`search <#Search>`__
+search
     Search Anaconda Cloud
-`show <#Show>`__
+show
     Show information about an object
-`upload <#Upload>`__
+upload
     Upload packages to Anaconda Cloud
-`whoami <#Whoami>`__
+whoami
     Print the information of the current user
 
 
@@ -181,8 +181,6 @@ Print the information of the current user
 `-h / --help`
     show this help message and exit
 
-`  <#Informational>`__
-
 Informational
 ~~~~~~~~~~~~~
 
@@ -230,8 +228,6 @@ Search Anaconda Cloud
     only search for packages of this type
 
 Search Anaconda Cloud for packages
-
-`  <#Config>`__
 
 config
 ^^^^^^

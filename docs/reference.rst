@@ -65,8 +65,6 @@ Your credentials for anaconda-client are those you used to create an
 account on Anaconda Cloud. For help, go to Anaconda.org and click
 "forgot password."
 
-`  <#LogIntoAnacondaClient>`__
-
 Log into anaconda-client
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -77,8 +75,6 @@ terminal window and run:
 
     anaconda login
 
-`  <#SeeAListOfAnacondaClientCommands>`__
-
 See a list of anaconda-client commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -87,8 +83,6 @@ From a terminal window, run:
 ::
 
     anaconda --help
-
-`  <#FindOutMoreAboutAnAnacondaClientCommand>`__
 
 Find out more about an anaconda-client command
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -99,8 +93,6 @@ From a terminal window, run:
 
     anaconda COMMANDNAME -h
 
-`  <#SeeAListOfAllAvailableAnacondaClientConfigurationFiles>`__
-
 See a list of all available anaconda-client configuration files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -109,8 +101,6 @@ From a terminal window, run:
 ::
 
     anaconda config --files
-
-`  <#SeeAListOfAllOfMyAnacondaClientConfigurationVariables>`__
 
 See a list of all of my anaconda-client configuration variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -121,8 +111,6 @@ From a terminal window, run:
 
     anaconda config --show
 
-`  <#FindOutMoreAboutTheAnacondaClient>`__
-
 Find out more about the anaconda-client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -130,12 +118,8 @@ If you have a question that you cannot answer using the help command,
 documentation or community support email group, please `contact
 us <mailto:support@anaconda.org>`__.
 
-`  <#BuildPackages>`__
-
 Build packages
 ~~~~~~~~~~~~~~
-
-`  <#BuildAndUploadAPackage>`__
 
 Build and upload a package
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -143,8 +127,6 @@ Build and upload a package
 See the :doc:`Anaconda Cloud Build Guide <build>` for step-by-step
 instructions. For a quick run-through, try the Quickstart :ref:`build guide
 section <quickstart-build-upload>`.
-
-`  <#TestABuiltPackage>`__
 
 Test a built package
 ^^^^^^^^^^^^^^^^^^^^
@@ -155,8 +137,6 @@ Specify the '--use-local' option. For example:
 
     conda create --use-local -n test PACKAGENAME
 
-`  <#UploadAPackageToAnacondaCloud>`__
-
 Upload a package to Anaconda Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -165,8 +145,6 @@ In a terminal window, run:
 ::
 
     anaconda upload PACKAGENAME
-
-`  <#FindHelpUploadingPackages>`__
 
 Find help uploading packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -179,12 +157,8 @@ window, run:
 
     anaconda upload -h
 
-`  <#ManageMyAccount>`__
-
 Manage my account
 ~~~~~~~~~~~~~~~~~
-
-`  <#BuildPrivatePackagesOrGetMorePackageStorageSpace>`__
 
 Build private packages or get more package storage space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -192,17 +166,11 @@ Build private packages or get more package storage space
 Upgrade to a paid plan. Log into Anaconda Cloud, from the toolbar select
 User Settings > Billing, and click the Change Plan button.
 
-`  <#Faq>`__
-
 FAQ
 ===
 
-`  <#GeneralQuestions>`__
-
 General Questions
 ~~~~~~~~~~~~~~~~~
-
-`  <#WhatIsAnacondaCloud>`__
 
 What is Anaconda Cloud?
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -215,15 +183,11 @@ made to the packages and environments you're using. Anaconda Build helps
 you build cross-platform packages with build workers on a cloud
 computing service or on your local computer.
 
-`  <#WhatKindOfPackagesDoesAnacondaCloudSupport>`__
-
 What kind of packages does Anaconda Cloud support?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Anaconda Cloud supports any type of package. Today, it's primarily used
 for conda and PyPI packages, as well as notebooks and environments.
-
-`  <#WhoCanFindAndInstallMyPackages>`__
 
 Who can find and install my packages?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -232,8 +196,6 @@ If you have a free account, all of your packages are public, so after
 you upload them to Anaconda Cloud anyone can search for and download
 them. If you wish to designate private packages, you can `purchase a
 paid account <https://anaconda.org/about/pricing>`__.
-
-`  <#WhatIsContinuumAnalytics>`__
 
 What is Continuum Analytics?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -245,8 +207,6 @@ distribution and contribute to many other open source-based data
 analytics tools. You can find out more about us
 `here <http://continuum.io/our-story>`__.
 
-`  <#WhatAreAnacondaCloudSTermsOfService>`__
-
 What are Anaconda Cloud's Terms of Service?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -254,12 +214,8 @@ You can read our terms of service
 `here <https://anaconda.org/about/legal/terms>`__. For any additional
 questions, please `email us <mailto:support@anaconda.org>`__.
 
-`  <#AccountsAndPricing>`__
-
 Accounts and Pricing
 ~~~~~~~~~~~~~~~~~~~~
-
-`  <#HowMuchDoesAnacondaCloudCost>`__
 
 How much does Anaconda Cloud cost?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -270,8 +226,6 @@ storage space, you can upgrade to a private account. For more
 information, see our `plans and
 pricing <https://anaconda.org/about/pricing>`__.
 
-`  <#DoYouOfferFreeAccessForAcademicUse>`__
-
 Do you offer free access for academic use?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -279,8 +233,6 @@ Yes. Our academic accounts even include free add-ons such as IOPro and
 Anaconda Accelerate. You must sign up for Anaconda Cloud with an .edu
 email address. Other features such as private packages and advanced
 build worker options require a paid plan.
-
-`  <#HowDoIGetStartedWithAnacondaCloud>`__
 
 How do I get started with Anaconda Cloud?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -290,16 +242,12 @@ even having an account. If you wish to build and upload packages, you
 will need to sign up for an `Anaconda Cloud
 account <https://anaconda.org/>`__. See our :doc:`using` section for more help.
 
-`  <#WhatKindOfAccountDoIHave>`__
-
 What kind of account do I have?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default your account is a personal, free account. All packages you
 upload to Anaconda Cloud will be public, and you will be the only person
 with administrative access to your account.
-
-`  <#WhatSIncludedInTheFreeVersionOfAnacondaCloud>`__
 
 What's included in the free version of Anaconda Cloud?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -308,16 +256,12 @@ The Free plan allows you to search for, create and host public packages,
 and provides up to 3 GB storage space. `Compare
 plans <https://anaconda.org/about/pricing>`__.
 
-`  <#WhatSIncludedInThePaidPersonalVersionOfAnacondaCloud>`__
-
 What's included in the paid personal version of Anaconda Cloud?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 With our paid personal subscription, you can create and host private
 packages, and use 10 GB of storage space. `Compare
 plans <https://anaconda.org/about/pricing>`__.
-
-`  <#WhatSIncludedInThePaidOrganizationVersionOfAnacondaCloud>`__
 
 What's included in the paid organization version of Anaconda Cloud?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -326,16 +270,12 @@ With our paid subscriptions, you can create and host private packages,
 multiple users and groups, and use 100 GB of storage space. `Compare
 plans <https://anaconda.org/about/pricing>`__.
 
-`  <#HowCanIUpgradeMyAccount>`__
-
 How can I upgrade my account?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can upgrade to a paid account
 `here <https://anaconda.org/settings/billing>`__. This will allow you to
 create private packages and increase your storage limit.
-
-`  <#WhatIsAnOrganizationAccountAndHowIsItDifferentFromAnIndividualAccount>`__
 
 What is an organization account, and how is it different from an individual account?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -344,12 +284,8 @@ An organization account allows multiple individual users to administer
 packages and have more control of package access by other users. An
 individual account is for use by one person.
 
-`  <#Glossary>`__
-
 Glossary
 ========
-
-`  <#Anaconda>`__
 
 Anaconda
 ~~~~~~~~
@@ -361,8 +297,6 @@ contains over 250 additional Open Source packages that can be installed
 or updated after installing Anaconda with the
 ``conda install PACKAGENAME`` command.
 
-`  <#AnacondaCloud>`__
-
 Anaconda Cloud
 ~~~~~~~~~~~~~~
 
@@ -373,8 +307,6 @@ packages, download and install them. Anaconda Cloud works with the
 Anaconda-Build command line interface to build packages on your local
 computer. Anaconda Cloud is located at anaconda.org.
 
-`  <#AnacondaBuildCli>`__
-
 Anaconda-Build CLI
 ~~~~~~~~~~~~~~~~~~
 
@@ -382,8 +314,6 @@ The command line interface (CLI) to Anaconda Cloud that lets you build
 cross-platform packages with build workers on a cloud computing service
 or on your local computer. Contrast to conda-build which can build
 packages only for your local operating system.
-
-`  <#AnacondaClientCli>`__
 
 Anaconda-Client CLI
 ~~~~~~~~~~~~~~~~~~~
@@ -394,15 +324,11 @@ account. Anaconda-Client must be installed before you can build
 cross-platform packages with Anaconda-Build. It is not necessary for
 downloading or installing packages from Anaconda Cloud.
 
-`  <#Binstar>`__
-
 Binstar
 ~~~~~~~
 
 Binstar was an early project name for Anaconda Cloud. You may still see
 the term Binstar in certain command and directory names.
-
-`  <#BuildQueue>`__
 
 Build Queue
 ~~~~~~~~~~~
@@ -419,8 +345,6 @@ interface.
 -  Most queues are private. Anaconda Cloud also offers a public queue
    for building Linux-64 packages, which can be used by any Anaconda
    Cloud user.
-
-`  <#BuildWorker>`__
 
 Build Worker
 ~~~~~~~~~~~~
@@ -442,8 +366,6 @@ delegate incoming requests of the right type to that build worker.
 -  The worker will do the actual work of building, compiling and testing
    the package and may optionally then upload the compiled package to
    Anaconda Cloud.
-
-`  <#Labels>`__
 
 Labels
 ~~~~~~
@@ -468,16 +390,12 @@ test
 https://anaconda.org/travis/labels/any-custom-label - any label you
 wish to use.
 
-`  <#Conda>`__
-
 Conda
 ~~~~~
 
 The conda package manager and environment manager program that installs
 and updates packages and their dependencies, and lets you easily switch
 between environments on your local computer.
-
-`  <#CondaBuild>`__
 
 Conda-Build
 ~~~~~~~~~~~
@@ -486,15 +404,11 @@ The command line interface that lets you build packages for your local
 operating system. Contrast to Anaconda Cloud that lets you build
 cross-platform packages.
 
-`  <#CondaPackage>`__
-
 Conda package
 ~~~~~~~~~~~~~
 
 A tarball (compressed file) containing system-level libraries, Python
 modules, executable programs, or other components.
-
-`  <#Miniconda>`__
 
 Miniconda
 ~~~~~~~~~
@@ -506,8 +420,6 @@ installed by installing either Anaconda or Miniconda, other software
 packages may be installed directly from the command line with 'conda
 install'. See also Anaconda and conda.
 
-`  <#NoarchPackage>`__
-
 Noarch package
 ~~~~~~~~~~~~~~
 
@@ -517,8 +429,6 @@ search for packages on any system in a channel, conda always checks both
 the system-specific subdirectory, for example, ``linux-64`` *and* the
 ``noarch`` directory.
 
-`  <#Onsite>`__
-
 OnSite
 ~~~~~~
 
@@ -526,8 +436,6 @@ Anaconda Cloud is powered by Anaconda Server by Continuum Analytics. Run
 your own Anaconda server behind firewalls or in air-gapped environments.
 Contact `sales@continuum.io <mailto:sales@continuum.io>`__ for more
 information.
-
-`  <#Organization>`__
 
 Organization
 ~~~~~~~~~~~~
@@ -537,15 +445,11 @@ allows multiple individual users to administer packages and control
 package access to different user groups. It also includes a large amount
 of storage space.
 
-`  <#Repository>`__
-
 Repository
 ~~~~~~~~~~
 
 A storage location from which software packages may be retrieved and
 installed on a computer.
-
-`  <#SourcePackage>`__
 
 Source package
 ~~~~~~~~~~~~~~
@@ -565,8 +469,6 @@ account. It is an alpha-numeric code that is inserted into a URL that
 allows access by anyone who has the URL. You can use anaconda-client to
 generate new tokens to give other users specifically scoped access to
 packages and collections.
-
-`  <#UserNamespace>`__
 
 User Namespace
 ~~~~~~~~~~~~~~

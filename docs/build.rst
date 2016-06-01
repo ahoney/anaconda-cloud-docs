@@ -229,8 +229,8 @@ GitHub builds
 Create a git repo
 ^^^^^^^^^^^^^^^^^
 
-Let's use the package you have created in the `submit a
-build <#SubmitABuild>`__ example. First `create a new github
+Let's use the package you have created in the :ref:`submit a
+build <submit-a-build>` example. First `create a new github
 repository <https://github.com/new>`__. You will then need to push the
 files to github.
 
@@ -260,7 +260,7 @@ github url.
 Save and trigger your builds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once you have `submitted a build from github <#GithubBuilds>`__ you may
+Once you have :ref:`submitted a build from github <github-builds>` you may
 want to save your build configuration, especially if you are using
 :ref:`extra options <cli-submit>` like ``-p``, ``--sub-dir``,
 ``--label``, ``--queue`` or ``--email``.
@@ -322,7 +322,7 @@ to Anaconda Cloud.
 branches to upload
 
 This is a python regex describing what branches should trigger builds
-that also upload the resulting `build\_targets <#Build_Targets>`__.
+that also upload the resulting :ref:`build_targets <build-targets>`.
 
 ** This can cause many files to accumulate in your account. Use
 carefully.
@@ -355,8 +355,8 @@ Now, test that the web hook is correct by pushing an empty commit.
 
 Bash
 
-To debug webhooks, first submit your build again with `anaconda-client
-trigger <#SaveAndTriggerYourBuilds>`__. This should highlight the issue
+To debug webhooks, first submit your build again with :ref:`anaconda-client
+trigger <save-and-trigger-builds>`. This should highlight the issue
 with your build.
 
 If ``anaconda trigger`` works, but the webhook still does not, go to
@@ -371,8 +371,8 @@ Configuration file tags
 
 Each package you build will have a build config file in its root
 directory named ``.binstar.yml``. If you are not already familiar with
-the build process, please begin by reading this guide on `how to submit
-a build <#SubmitABuild>`__.
+the build process, please begin by reading this guide on :ref:`how to submit
+a build <submit-a-build>`.
 
 This yaml file contains a number of tags to control the way a build is
 run. Every tag is optional, and all tags can be written as a single
@@ -386,6 +386,7 @@ command or as a list.
 
 YAML
 
+.. _script:
 
 script
 ^^^^^^
@@ -424,7 +425,7 @@ You can also define scripts to be run before and after the main script:
 YAML
 
 For the ``after_script`` tag the environment variable
-`BINSTAR\_BUILD\_RESULT <#EnvironmentVariables>`__ will be made
+:ref:`BINSTAR_BUILD_RESULT <environment-variables>` will be made
 available as either *success* or *failure*.
 
 
@@ -432,7 +433,7 @@ after\_success and after\_failure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you use the after\_success or after\_failure tags, one or the other
-of them will run after the `script <#Script>`__ tags depending on if the
+of them will run after the :ref:`script` tags depending on if the
 build was a success or a failure. **Build errors are not caught**.
 
 ::
@@ -443,8 +444,10 @@ build was a success or a failure. **Build errors are not caught**.
 
 YAML
 
-build\_targets
-^^^^^^^^^^^^^^
+.. _build-targets:
+
+build_targets
+^^^^^^^^^^^^^
 
 These files will be uploaded to your Anaconda Cloud package. These are
 files that will be uploaded to Anaconda Cloud with :ref:`anaconda
@@ -466,6 +469,7 @@ Or a file or glob of files:
 
 YAML
 
+.. _build-platform:
 
 platform
 ^^^^^^^^
@@ -473,8 +477,8 @@ platform
 This selects the platforms for which you wish to build your packages.
 
 **Please note:** by default only ``linux-64`` build-workers are
-available for public use on Anaconda Cloud. You can `add your own build
-workers <#LaunchingABuildWorker>`__ if you need access to additional
+available for public use on Anaconda Cloud. You can :ref:`add your own build
+workers <launching-a-build-worker>` if you need access to additional
 platforms.
 
 To see which platforms are available to you, issue the :ref:`anaconda build
@@ -500,8 +504,9 @@ platforms:
 YAML
 
 The items in the ``platform`` tag describe the first of the three axes
-of the `build matrix <#BuildMatrix>`__.
+of the :ref:`build-matrix`.
 
+.. _build-engine:
 
 engine
 ^^^^^^
@@ -520,11 +525,12 @@ Note that the first item ``python=2 nodejs=0.10`` is not a list. In this
 build item both packages python and nodejs will be available.
 
 The items in the ``engine`` tag describe the second of the three axes of
-the `build matrix <#BuildMatrix>`__.
+the :ref:`build matrix`.
 
 The environment variables CONDA\_PY and CONDA\_NPY are set based on the
 presence of Python or numpy in the engine tag.
 
+.. _build-env:
 
 env
 ^^^
@@ -540,7 +546,7 @@ An export of environment variables for the sub-build:
 YAML
 
 The items in the ``env`` tag describe the third of the three axes of the
-`build matrix <#BuildMatrix>`__.
+:ref:`build matrix`.
 
 
 install\_channels
@@ -601,13 +607,14 @@ ends with ``\r``:
 
 YAML
 
+.. _build-matrix:
 
 Build matrix
 ~~~~~~~~~~~~
 
 When you submit one ``.binstar.yml`` file many sub-builds are launched,
-one for each combination of the values of the `platform <#Platform>`__,
-`engine <#Engine>`__ and `env <#Env>`__ tags.
+one for each combination of the values of the :ref:`build-platform`,
+:ref:`build-engine` and :ref:`build-env` tags.
 
 The build matrix is formed by combining ``[platform * engine * env]`` to
 get the sub-builds.
@@ -681,6 +688,7 @@ YAML
 Now the sub-build: ``platform: linux-32 engine: python=3`` will not be
 submitted.
 
+.. _environment-variables:
 
 Environment variables
 ~~~~~~~~~~~~~~~~~~~~~
@@ -696,7 +704,7 @@ BINSTAR\_ENGINE
 BINSTAR\_PLATFORM
     the platform from the platform tag
 BINSTAR\_BUILD\_RESULT
-    This is set after the `script <#Script>`__ tag is run
+    This is set after the :ref:`script` tag is run
 CONDA\_PY
     The conda python version from the engine tag
 CONDA\_NPY
@@ -711,7 +719,7 @@ Build workers
 This section contains advanced information on configuring builds on the
 `Anaconda Cloud <http://anaconda.org>`__ platform. If you are not
 already familiar with the build process, begin by reading this guide on
-`how to submit a build <#SubmitABuild>`__.
+:ref:`how to submit a build <submit-a-build>`.
 
 NOTE: Anaconda build defaults to the linux-64 platform, and `Anaconda
 Cloud <http://anaconda.org>`__ provides free linux-64 workers. If you do
@@ -750,17 +758,18 @@ Bash
 
 Where ``USERNAME`` is your `Anaconda Cloud <http://anaconda.org>`__
 username and ``QUEUENAME`` is an alphanumeric name of your choice. For
-more information see `configuring your build
-queues <#ConfiguringBuildQueues>`__.
+more information see :ref:`configuring your build
+queues <configuring-build-queues>`.
 
+.. _launching-a-build-worker:
 
 Launching a build worker
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Before you can begin using the queue you created, you will need to
 attach a build-worker to the queue. The basic build worker runs on your
-machine (Linux, OS X or Windows) as the current user (see `security
-considerations <#SecurityConsiderations>`__) and accepts jobs from the
+machine (Linux, OS X or Windows) as the current user (see :ref:`security
+considerations <security-considerations>`) and accepts jobs from the
 build queue that you specify.
 
 In order to avoid the build-worker waiting on user input for conda
@@ -900,6 +909,7 @@ system <https://github.com/Anaconda-Server/chalmers>`__ can be used to
 run build workers in the background across all platforms. Please see the
 readme file in that repository for further information.
 
+.. _configuring-build-queues:
 
 Configuring build queues
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -943,6 +953,7 @@ To share access to your queue:
 #. Add the user by name (individual accounts) or by group (organization
    accounts).
 
+.. _security-considerations:
 
 Security considerations
 ~~~~~~~~~~~~~~~~~~~~~~~
