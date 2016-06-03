@@ -170,25 +170,27 @@ actual work.
 You need to add a ``meta.yaml`` file and modify your ``.binstar.yml``
 file so it contains the following keys:
 
-.binstar.yml
+.binstar.yml::
 
-::
+  package: conda_build_test
+  script:
+    - conda build .
+  build_targets: conda
 
-    package: conda_build_testscript:  - conda build .build_targets: conda
+meta.yaml::
 
-|
-
-YAML
-
-meta.yaml
-
-::
-
-    package:  name: conda_build_test  version: 0.0.1build:  number: 1  script:    - echo "This is my anaconda build with conda"requirements:  run:    - pythonabout:  summary: This is an anaconda build test!
-
-|
-
-YAML
+  package:
+    name: conda_build_test
+    version: 0.0.1
+  build:
+    number: 1
+    script:
+      - echo "This is my anaconda build with conda"
+  requirements:
+    run:
+      - python
+  about:
+    summary: This is an anaconda build test!
 
 Note: Please see our publicly available `Conda
 Recipes <https://github.com/conda/conda-recipes>`__.
@@ -201,9 +203,7 @@ Once your have created the ``meta.yaml`` file you can test that your
 conda build runs locally with `conda
 build <http://conda.pydata.org/docs/build.html>`__.
 
-Submitting this build is the same as the first:
-
-::
+Submitting this build is the same as the first::
 
     conda build .
     anaconda build submit .
@@ -313,23 +313,17 @@ To get to this page, navigate to your package
 Click "Edit". The fields we care about for enabling continuous
 integration are:
 
-branches to test
-
-This is a python regular expression (regex) describing what branches
+branches to test: This is a python regular expression (regex) describing what branches
 should trigger builds in ``test-only`` mode. No files will be uploaded
 to Anaconda Cloud.
 
-branches to upload
-
-This is a python regex describing what branches should trigger builds
+branches to upload: This is a python regex describing what branches should trigger builds
 that also upload the resulting :ref:`build_targets <build-targets>`.
 
 ** This can cause many files to accumulate in your account. Use
 carefully.
 
-Add Webhook
-
-If checked Anaconda Cloud will add a `github
+Add Webhook: If checked Anaconda Cloud will add a `github
 webhook <https://developer.github.com/webhooks/>`__ with the value
 `https://api.anaconda.org/github-hook <https://api.anaconda.org/github-hook>`__
 to your github package.
@@ -349,11 +343,13 @@ Now, test that the web hook is correct by pushing an empty commit.
 
 ::
 
-    git commit -m "Trigger build" --allow-emptygit push # This should give enough time to let github send the webhooksleep 10 anaconda build list-all USERNAME/conda_build_test
-
-|
-
-Bash
+  git commit -m "Trigger build" --allow-empty
+  git push
+  
+  # This should give enough time to let github send the webhook
+  sleep 10
+  
+  anaconda build list-all USERNAME/conda_build_test
 
 To debug webhooks, first submit your build again with :ref:`anaconda-client
 trigger <save-and-trigger-builds>`. This should highlight the issue
@@ -380,11 +376,11 @@ command or as a list.
 
 ::
 
-    tag: single_command# ORtag:  - some_command  - another_command
-
-|
-
-YAML
+    tag: single_command
+    # OR
+    tag:
+      - some_command
+      - another_command
 
 .. _script:
 
@@ -397,19 +393,13 @@ Define the main script to run on the build machine:
 
     script: echo "hello world!"
 
-|
-
-YAML
-
 Script may also be a list:
 
 ::
 
-    script:  - some_command  - another_command
-
-|
-
-YAML
+    script:
+      - some_command
+      - another_command
 
 before\_script and after\_script
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -418,11 +408,8 @@ You can also define scripts to be run before and after the main script:
 
 ::
 
-    before_script: some_commandafter_script:  another_command
-
-|
-
-YAML
+    before_script: some_command
+    after_script:  another_command
 
 For the ``after_script`` tag the environment variable
 :ref:`BINSTAR_BUILD_RESULT <environment-variables>` will be made
@@ -438,11 +425,10 @@ build was a success or a failure. **Build errors are not caught**.
 
 ::
 
-    after_success:  - echo Yay!after_failure:  - echo Oops?
-
-|
-
-YAML
+    after_success:
+      - echo Yay!
+    after_failure:
+      - echo Oops?
 
 .. _build-targets:
 
@@ -465,10 +451,6 @@ Or a file or glob of files:
 
     build_targets: /opt/anaconda/my-package.tar.bz2
 
-|
-
-YAML
-
 .. _build-platform:
 
 platform
@@ -486,22 +468,31 @@ queue <cli-queue>` command:
 
 ::
 
-    $ anaconda build queueUsing anaconda-server api site https://api.anaconda.org build/binstar/public           [] + Worker hostname:docker-2        platform:linux-64        dist:centos   - Id 54b57d3ee1dad10a4987f6cd   - Last seen 5 seconds ago   - binstar-build v0.10.3 (binstar v0.10.1) + Worker hostname:docker-2        platform:linux-64        dist:centos   - Id 54b989d1e1dad10da34074d6   - Last seen 10 seconds ago   - binstar-build v0.10.3 (binstar v0.10.1)
-
-|
-
-Bash
+    $ anaconda build queue
+    Using anaconda-server api site https://api.anaconda.org
+    
+    build/binstar/public           []
+     + Worker hostname:docker-2        platform:linux-64        dist:centos
+       - Id 54b57d3ee1dad10a4987f6cd
+       - Last seen 5 seconds ago
+       - binstar-build v0.10.3 (binstar v0.10.1)
+     + Worker hostname:docker-2        platform:linux-64        dist:centos
+       - Id 54b989d1e1dad10da34074d6
+       - Last seen 10 seconds ago
+       - binstar-build v0.10.3 (binstar v0.10.1)
 
 The anaconda-build cli has the capacity to support the following
 platforms:
 
 ::
 
-    platform:  - linux-32  - linux-64  - osx-32  - osx-64  - win-32  - win-64
-
-|
-
-YAML
+    platform:
+      - linux-32
+      - linux-64
+      - osx-32
+      - osx-64
+      - win-32
+      - win-64
 
 The items in the ``platform`` tag describe the first of the three axes
 of the :ref:`build-matrix`.
@@ -511,15 +502,11 @@ of the :ref:`build-matrix`.
 engine
 ^^^^^^
 
-Sets the initial conda packages you want to build with:
+Sets the initial conda packages you want to build with::
 
-::
-
-    engine:  - python=2 nodejs=0.10  - python=3
-
-|
-
-YAML
+    engine:
+      - python=2 nodejs=0.10
+      - python=3
 
 Note that the first item ``python=2 nodejs=0.10`` is not a list. In this
 build item both packages python and nodejs will be available.
@@ -539,11 +526,9 @@ An export of environment variables for the sub-build:
 
 ::
 
-    env:  - FOO=BAR  - ANACONDA=GREAT JENKINS=OK
-
-|
-
-YAML
+    env:
+      - FOO=BAR
+      - ANACONDA=GREAT JENKINS=OK
 
 The items in the ``env`` tag describe the third of the three axes of the
 :ref:`build-matrix`.
@@ -559,11 +544,9 @@ This shows the install\_channels configured for building R packages.
 
 ::
 
-    install_channels:   - r   - defaults
-
-|
-
-YAML
+    install_channels:
+       - r
+       - defaults
 
 If private packages are required in your build, make sure to include a
 :ref:`token <reference-token>` in the channel configuration.
@@ -573,11 +556,9 @@ depends on jsmith's private packages.
 
 ::
 
-    install_channels:  - t/TOKEN/jsmith  - defaults
-
-|
-
-YAML
+    install_channels:
+      - t/TOKEN/jsmith
+      - defaults
 
 quiet
 ~~~~~
@@ -589,23 +570,18 @@ you can redact these messages by using the ``quiet`` key.
 
 ::
 
-    Fetching packages ...    ncurses-5.9-1.   0% |                              | ETA:  --:--:--   0.00  B/s    ncurses-5.9-1.   2% |                               | ETA:  0:00:00  36.09 MB/s    ncurses-5.9-1.   4% |#                              | ETA:  0:00:00  54.15 MB/s    ncurses-5.9-1.   6% |##                             | ETA:  0:00:00  66.78 MB/s    ncurses-5.9-1.   9% |##                             | ETA:  0:00:00  76.02 MB/s
-
-|
-
-Text only
+    Fetching packages ...
+        ncurses-5.9-1.   0% |                              | ETA:  --:--:--   0.00  B/s
+        ncurses-5.9-1.   2% |                               | ETA:  0:00:00  36.09 MB/s
+        ncurses-5.9-1.   4% |#                              | ETA:  0:00:00  54.15 MB/s
+        ncurses-5.9-1.   6% |##                             | ETA:  0:00:00  66.78 MB/s
+        ncurses-5.9-1.   9% |##                             | ETA:  0:00:00  76.02 MB/s
 
 More specifically, the following usage of ``quiet`` in the
 ``.binstar.yml`` file will redact from the build log any message that
-ends with ``\r``:
-
-::
+ends with ``\r``::
 
     quiet: True
-
-|
-
-YAML
 
 .. _build-matrix:
 
@@ -623,11 +599,15 @@ The following configuration will run 8 sub builds:
 
 ::
 
-    platform:  - linux-32  - linux-64engine:  - python=2  - python=3env:  - CXX=g++  - CXX=clang++
-
-|
-
-YAML
+    platform:
+      - linux-32
+      - linux-64
+    engine:
+      - python=2
+      - python=3
+    env:
+      - CXX=g++
+      - CXX=clang++
 
 #. platform: ``linux-64`` engine: ``python=2`` env: ``CXX=g++``
 #. platform: ``linux-64`` engine: ``python=2`` env: ``CXX=clang++``
@@ -647,11 +627,15 @@ if you are running a build on Windows, the matrix:
 
 ::
 
-    platform:  - win-32  - linux-32env:  - MSVC=2008  - MSVC=2010  - CC=gccscript:    build.sh
-
-|
-
-YAML
+    platform:
+      - win-32
+      - linux-32
+    env:
+      - MSVC=2008
+      - MSVC=2010
+      - CC=gcc
+    script:
+        build.sh
 
 would not work, because the configurations
 ``platform: linux-32 env: MSVC=2008`` and
@@ -663,11 +647,15 @@ Yaml documents are separated by ``---``.
 
 ::
 
-    platform: linux-32env: CC=gccscript: build.sh--- # New Build Matrixplatform: win-32env:  - MSVC=2008  - MSVC=2010script: build.bat
-
-|
-
-YAML
+    platform: linux-32
+    env: CC=gcc
+    script: build.sh
+    --- # New Build Matrix
+    platform: win-32
+    env:
+      - MSVC=2008
+      - MSVC=2010
+    script: build.bat
 
 This would now produce the correct sub-builds.
 
@@ -679,11 +667,17 @@ You can exclude a sub-build entry from a matrix with the exclude tag.
 
 ::
 
-    platform:  - linux-32  - linux-64engine:  - python=2  - python=3script: conda build .---platform: linux-32engine: python=3exclude: true
-
-|
-
-YAML
+    platform:
+      - linux-32
+      - linux-64
+    engine:
+      - python=2
+      - python=3
+    script: conda build .
+    ---
+    platform: linux-32
+    engine: python=3
+    exclude: true
 
 Now the sub-build: ``platform: linux-32 engine: python=3`` will not be
 submitted.
@@ -746,15 +740,9 @@ queue holds submitted builds until a build worker is ready to remove the
 build and run it. At present, when you submit a job the default build
 queue is ``binstar/public``.
 
-To create your queue run:
-
-::
+To create your queue run::
 
     anaconda build queue --create USERNAME/QUEUENAME
-
-|
-
-Bash
 
 Where ``USERNAME`` is your `Anaconda Cloud <http://anaconda.org>`__
 username and ``QUEUENAME`` is an alphanumeric name of your choice. For
@@ -774,15 +762,9 @@ build queue that you specify.
 
 In order to avoid the build-worker waiting on user input for conda
 commands, conda must be configured not to prompt for confirmation. Run
-the following command to set the configuration correctly:
-
-::
+the following command to set the configuration correctly::
 
     conda config --set always_yes true
-
-|
-
-Bash
 
 A worker needs to be registered before it can be run. This command
 registers a worker for the queue USERNAME/QUEUE and outputs the worker's
@@ -793,19 +775,11 @@ id as the yaml filename.
 
     anaconda worker register USERNAME/QUEUE
 
-|
-
-Bash
-
 To see other options for registering workers, try
 
 ::
 
     anaconda worker register --help
-
-|
-
-Bash
 
 The register step should print out a worker id you can use to run a
 worker. This command will start a worker with a ``worker_id``:
@@ -814,20 +788,12 @@ worker. This command will start a worker with a ``worker_id``:
 
     anaconda worker run <worker-id-from-register-step>
 
-|
-
-Bash
-
 That's it! You can now submit a job to your queue and your new build
 worker will pick it up and build it:
 
 ::
 
     anaconda build submit ./my-build --queue USERNAME/QUEUENAME
-
-|
-
-Bash
 
 NOTE: You must leave your build worker process running in order to
 submit builds to it. You may wish to attach build workers to your queue
@@ -842,10 +808,6 @@ with:
 
     anaconda worker deregister <worker-id-from-register-step>
 
-|
-
-Bash
-
 If you need to deregister a worker, then check your Anaconda server
 instance's /settings/build-queue page to remove the worker or list the
 workers you have registered with this command:
@@ -854,20 +816,12 @@ workers you have registered with this command:
 
     anaconda worker list
 
-|
-
-Bash
-
 There is an option for listing only the workers registered from the
 current hostname:
 
 ::
 
     anaconda worker list --this-host-only
-
-|
-
-Bash
 
 Registered workers can also be filtered by queue or organization with
 one of these commands:
@@ -876,29 +830,15 @@ one of these commands:
 
     anaconda worker list --queue USERNAME/QUEUE
 
-|
-
-Bash
-
 Or:
 
 ::
 
     anaconda worker list --org ORGNAME
 
-|
-
-Bash
-
-Review all help for register, run, deregister, and list with:
-
-::
+Review all help for register, run, deregister, and list with::
 
     anaconda worker -h
-
-|
-
-Bash
 
 
 Running workers in the background
@@ -918,15 +858,9 @@ By default your build worker will run builds on your ``binstar/public``
 queue. You may change this in two ways:
 
 #. Use the ``--queue`` option when issuing a ``anaconda build`` :ref:`submit,
-   save or trigger <submitting-builds>` command:
-
-   ::
+   save or trigger <submitting-builds>` command::
 
        anaconda build submit ./my-build --queue USERNAME/QUEUENAME
-
-   |
-
-   Bash
 
 #. Specify a default queue for your build workers. This will affect all
    builds for your account. You can do this by visiting
@@ -977,13 +911,10 @@ Executing builds in a Docker container
 The anaconda build cli includes the ability to build in a docker
 container::
 
-::
-
-    docker pull binstar/linux-64    anaconda worker register USERNAME/QUEUENAME    # prints worker-id  anaconda worker docker_run <worker-id> --image binstar/linux-64
-
-|
-
-Bash
+    docker pull binstar/linux-64
+    anaconda worker register USERNAME/QUEUENAME
+    # prints worker-id
+    anaconda worker docker_run <worker-id> --image binstar/linux-64
 
 .. |Continuous Integration page| image:: /img/cloud-ci.png
 .. |Webhook Continuous Integration page| image:: /img/cloud-webhook-ci.png

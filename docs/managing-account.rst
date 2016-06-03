@@ -30,7 +30,7 @@ limitations:
    packages only for Linux-64 machines, not OS X or Windows.
 -  Builds run as capacity is available in this shared public queue.
 
-You’ll need to create an Anaconda Cloud account to:
+You'll need to create an Anaconda Cloud account to:
 
 -  author packages
 -  access shared private packages
@@ -38,7 +38,7 @@ You’ll need to create an Anaconda Cloud account to:
 To sign up for a free account:
 
 -  In a browser, go to `Anaconda Cloud <http://anaconda.org>`__.
--  Make sure the Sign Up tab is active. NOTE: There’s also a Sign In tab
+-  Make sure the Sign Up tab is active. NOTE: There's also a Sign In tab
    for existing users. |Anaconda Cloud home page|
 -  Select a username.
 -  Enter your email address. NOTE: Users who register with an .edu email
@@ -55,7 +55,7 @@ used to register on Anaconda Cloud is associated with a Gravatar
 account. Go to `gravatar.com <http://gravatar.com>`__ to associate your
 email address or to change your Gravatar profile photo.
 
-While you’re logged in, at the top right of each page in Anaconda Cloud,
+While you're logged in, at the top right of each page in Anaconda Cloud,
 the user toolbar displays. |Anaconda Cloud user toolbar|
 
 From left to right, the user toolbar options are:
@@ -68,7 +68,7 @@ From left to right, the user toolbar options are:
 #. Log Out button
 
 Packages that you have created with this account appear on your
-Dashboard. There’s a handy button to create a new package.
+Dashboard. There's a handy button to create a new package.
 
 See Also: :ref:`Working with Packages <using-packages>`
 

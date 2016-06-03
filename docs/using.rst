@@ -383,7 +383,7 @@ can be uploaded with the Anaconda CLI by using these steps.
 
 #. Now you can upload the file to your new namespace. Unlike uploading
    packages or notebooks, there is no auto-detect for other types of
-   files. You must explicitly specify the ‘package’, 'package-type' and
+   files. You must explicitly specify the 'package', 'package-type' and
    'version' fields.
 
    In this example the package name is baby-names, the package type is a
