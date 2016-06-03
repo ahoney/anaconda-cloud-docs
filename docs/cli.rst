@@ -2,6 +2,10 @@
 Command Reference
 =================
 
+#. :ref:`cli-anaconda`
+#. :ref:`cli-anaconda-build`
+#. `API Reference <https://api.anaconda.org/docs>`_
+
 Anaconda client is the command line interface (CLI) to Anaconda Cloud,
 and can be used for logging in, logging out, managing your account,
 uploading files, generating access tokens, viewing tokens, and other
@@ -10,6 +14,9 @@ tasks as shown by running
 anaconda -h
 
 The full command reference is shown below.
+
+
+.. _cli-anaconda:
 
 anaconda
 --------
@@ -534,7 +541,9 @@ Copy packages from one account to another
     Label to put all packages into
 
 
-Anaconda-Build
+.. _cli-anaconda-build:
+
+anaconda build
 --------------
 
 Anaconda build client for continuous integration, testing and building packages
