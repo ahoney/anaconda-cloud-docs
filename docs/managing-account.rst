@@ -162,9 +162,7 @@ manage from the drop-down menu on the right.
 
 After switching from your user view to an organization view, you can
 review and edit the current group and user access for an organization,
-as well as add new groups and users. :
-
-::
+as well as add new groups and users::
 
         https://anaconda.org/organization/<OrgName>/settings/groups/
 
@@ -236,7 +234,6 @@ To revoke package access previously granted to a collaborator:
    collaborators.
 -  Click the red X button next to a collaborator to revoke their access.
 
-|
 
 Transfer a package to a new owner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -50,9 +50,7 @@ NOTE: For the following examples to work, you need to have
 `conda <http://conda.pydata.org/docs/download.html>`__ downloaded and
 installed.
 
-EXAMPLE: To download and install a package with conda, run:
-
-::
+EXAMPLE: To download and install a package with conda, run::
 
       conda install -c username packagename
 
@@ -74,49 +72,37 @@ other than the one you are using. To build private packages, upgrade to
 a paid account.
 
 To build and upload packages, install the Anaconda Client command line
-interface (CLI) and Anaconda Build. Open a Terminal window and enter:
-
-::
+interface (CLI) and Anaconda Build. Open a Terminal window and enter::
 
       conda install anaconda-client anaconda-build
 
 Next, log into your Anaconda Cloud account. In your terminal window,
-enter the following:
-
-::
+enter the following::
 
       anaconda login
 
 At the prompt, enter your Anaconda Cloud username and password.
 
 Next, choose the package you would like to build. For this quickstart,
-you can download our test package:
-
-::
+you can download our test package::
 
     git clone https://github.com/Anaconda-Server/anaconda-client
     cd anaconda-client/example-packages/conda/
 
 To build your test package, first install conda-build and turn off
-automatic anaconda-client uploading, then run the conda build command:
-
-::
+automatic anaconda-client uploading, then run the conda build command::
 
       conda install conda-build
       conda config --set anaconda_upload no
       conda build .
 
 Check your path to where the newly built file was placed so you can use
-it in the next step:
-
-::
+it in the next step::
 
       conda build . --output
 
 Finally, log into your Anaconda Cloud account if you haven't already,
-and upload your newly built test package to your Anaconda Cloud account:
-
-::
+and upload your newly built test package to your Anaconda Cloud account::
 
       anaconda login
       anaconda upload /your/path/conda-package.tar.bz2
@@ -128,21 +114,15 @@ Share notebooks
 ===============
 
 Upload a `Jupyter notebook <http://jupyter.org/>`__ (formerly IPython
-notebook) to Anaconda Cloud:
-
-::
+notebook) to Anaconda Cloud::
 
     anaconda upload my-notebook.ipynb
 
-An HTML version of the notebook will be at:
-
-::
+An HTML version of the notebook will be at::
 
     http://notebooks.anaconda.org/<USERNAME>/my-notebook
 
-Anyone can download it:
-
-::
+Anyone can download it::
 
     anaconda download username/my-notebook
 
@@ -152,22 +132,16 @@ Share environments
 
 Save a `conda
 environment <http://conda.pydata.org/docs/using/envs.html>`__ and upload
-it to Anaconda Cloud:
-
-::
+it to Anaconda Cloud::
 
     conda env export -n my-environment -f my-environment.yml
     conda env upload -f my-environment.yml
 
-A list of your uploaded environments is at:
-
-::
+A list of your uploaded environments is at::
 
     http://envs.anaconda.org/<USERNAME>
 
-Anyone can download and install your environment from Anaconda Cloud:
-
-::
+Anyone can download and install your environment from Anaconda Cloud::
 
     conda env create user/my-environment
     source activate my-environment

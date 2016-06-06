@@ -17,9 +17,7 @@ These two tools work together. The Anaconda client command line
 interface (CLI) is used to connect to and manage your Anaconda Cloud
 account, upload packages you have created, and generate access tokens to
 allow access to private packages. View the complete list of tasks after
-installing with this command:
-
-::
+installing with this command::
 
     anaconda -h
 
@@ -29,30 +27,22 @@ system.
 These tools can be installed in three ways: with conda, with PIP, or
 with PIP from source. We recommend using conda.
 
-Option 1, `conda <http://conda.pydata.org/>`__:
-
-::
+Option 1, `conda <http://conda.pydata.org/>`__::
 
     conda install anaconda-client anaconda-build
 
-Option 2, `PIP <https://pip.pypa.io/en/latest/>`__:
-
-::
+Option 2, `PIP <https://pip.pypa.io/en/latest/>`__::
 
     pip install anaconda-client anaconda-build
 
-Option 3, installing with pip from source:
-
-::
+Option 3, installing with pip from source::
 
     pip install git+https://github.com/Anaconda-Server/anaconda-client
     pip install git+https://github.com/Anaconda-Server/anaconda-build
 
 Running anaconda-build workers on Linux requires installing the
 prerequisite tools tar, bzip2, ntp, chrpath, wget, dos2unix, patch, gcc,
-gcc-c++, git, and subversion:
-
-::
+gcc-c++, git, and subversion::
 
     yum install -y tar bzip2 ntp chrpath wget dos2unix patch gcc gcc-c++ git subversion
 
@@ -117,9 +107,7 @@ equivalent:
 -  `https://conda.anaconda.org/sean <https://conda.anaconda.org/sean>`__
 
 Commands such as ``conda install`` can be used with a channel or used
-with a channel and a label:
-
-::
+with a channel and a label::
 
      conda install —-channel sean selenium
      conda install —-channel sean/label/dev selenium
@@ -141,17 +129,13 @@ If you do not already use conda, follow the miniconda `quick
 install <http://conda.pydata.org/docs/install/quick.html>`__
 instructions.
 
-Now make sure you have Anaconda client and conda build installed:
-
-::
+Now make sure you have Anaconda client and conda build installed::
 
       conda install anaconda-client conda-build
 
 Now choose the repository you would like to build the package for. In
 this example we'll use a simple `conda test
-package <https://github.com/Anaconda-Server/anaconda-client/tree/master/example-packages/conda>`__:
-
-::
+package <https://github.com/Anaconda-Server/anaconda-client/tree/master/example-packages/conda>`__::
 
       git clone https://github.com/Anaconda-Server/anaconda-client
       cd anaconda-client/example-packages/conda/
@@ -162,9 +146,7 @@ and
 `build.sh <https://github.com/Anaconda-Server/anaconda-client/blob/master/example-packages/conda/build.sh>`__
 (for Linux or Mac) or bld.bat (for Windows). To build the package, turn
 off automatic anaconda-client uploading and then run the conda build
-command:
-
-::
+command::
 
       conda config --set anaconda_upload no
       conda build .
@@ -172,16 +154,12 @@ command:
 All packages built in this way are placed in a subdirectory of
 :doc:`Anaconda's </anaconda/index>` *conda-bld*
 directory. You can check where the resulting file was placed with the
-``--output`` option:
-
-::
+``--output`` option::
 
       conda build . --output
 
 Now upload the test package to Anaconda Cloud with the :ref:`anaconda
-upload <cli-upload>` command:
-
-::
+upload <cli-upload>` command::
 
       anaconda login
       anaconda upload /path/to/conda-package.tar.bz2
@@ -201,17 +179,13 @@ conda config.
 
 Conda knows how to interact with Anaconda Cloud. Specifying the channel
 ``sean`` translates to
-`https://conda.anaconda.org/sean <https://conda.anaconda.org/sean>`__:
-
-::
+`https://conda.anaconda.org/sean <https://conda.anaconda.org/sean>`__::
 
       conda config --add channels sean
 
 Now you can install public conda packages from sean's Anaconda Cloud
 account. Try installing the `testci
-package <https://anaconda.org/sean/testci>`__:
-
-::
+package <https://anaconda.org/sean/testci>`__::
 
       conda install testci
 
@@ -228,23 +202,17 @@ Uploading PyPI packages
 We can test PyPI package uploading with a small example package saved in
 the `anaconda-client
 repository <https://github.com/Anaconda-Server/anaconda-client/tree/master/example-packages/pypi>`__.
-Begin by cloning the repository from the command line:
-
-::
+Begin by cloning the repository from the command line::
 
       git clone git@github.com:Anaconda-Server/conda-server.git
       cd conda-server/example-packages/pypi/
 
-Now you can create your PyPI package with the ``setup.py`` script.
-
-::
+Now you can create your PyPI package with the ``setup.py`` script::
 
       python setup.py sdist
 
 The package has now been built as a source tarball and is ready to be
-uploaded:
-
-::
+uploaded::
 
       anaconda upload dist/*.tar.gz
 
@@ -256,9 +224,7 @@ Installing PyPI packages
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 The best way to install a PyPI package is using pip. For the following,
-we will use the package we authored in the examples above.
-
-::
+we will use the package we authored in the examples above::
 
       pip install --extra-index-url https://pypi.anaconda.org/USERNAME/simple pypi-test-package
 
@@ -267,9 +233,7 @@ Installing private PyPI packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 All Anaconda Cloud urls can be prefixed with ``/t/$TOKEN`` to access
-private packages:
-
-::
+private packages::
 
       TOKEN=$(anaconda auth --create --name YOUR-TOKEN-NAME)
       pip install --index-url https://pypi.anaconda.org/t/$TOKEN/USERNAME/simple test-package
@@ -309,9 +273,7 @@ generation.
 Generating tokens
 ^^^^^^^^^^^^^^^^^
 
-Tokens are generated with the Anaconda client:
-
-::
+Tokens are generated with the Anaconda client::
 
       anaconda auth --create --name YOUR-TOKEN-NAME --scopes 'repos conda:download'
 
@@ -319,9 +281,7 @@ This generates a random alphanumeric token string, which you can then
 distribute to fellow Anaconda Cloud users to enable them to download a
 package that you have marked private. The token produced in this example
 provides access to download any of your private conda repositories. It
-can be enabled with the ``conda config`` command:
-
-::
+can be enabled with the ``conda config`` command::
 
       conda config --add channels https://conda.anaconda.org/t/TOKEN/USERNAME
 
@@ -345,9 +305,7 @@ Uploading packages
 
 To easily upload package files to Anaconda Cloud use the
 :doc:`anaconda-client <cli>` command line interface and the
-:ref:`upload <cli-upload>` command:
-
-::
+:ref:`upload <cli-upload>` command::
 
       anaconda login
       anaconda upload PACKAGENAME
@@ -358,9 +316,7 @@ notebook types, and their versions.
 Your package is now available at:
 ``https://anaconda.org/<USERNAME>/<PACKAGENAME>``
 
-Your package can be also downloaded by anyone using the Anaconda CLI:
-
-::
+Your package can be also downloaded by anyone using the Anaconda CLI::
 
       anaconda download USERNAME/PACKAGENAME
 
@@ -374,9 +330,7 @@ named baby-names in comma separated value (CSV) format. Any type of file
 can be uploaded with the Anaconda CLI by using these steps.
 
 #. Use the :doc:`anaconda-client <cli>` command line interface to
-   create a new namespace for your file on Anaconda Cloud:
-
-   ::
+   create a new namespace for your file on Anaconda Cloud::
 
        anaconda login
        anaconda package --create USERNAME/baby-names
@@ -388,9 +342,7 @@ can be uploaded with the Anaconda CLI by using these steps.
 
    In this example the package name is baby-names, the package type is a
    file, this is the first version that we are uploading, and the full
-   filename is baby-names1.csv:
-
-   ::
+   filename is baby-names1.csv::
 
        anaconda upload --package baby-names --package-type file --version 1 baby-names1.csv
 
@@ -401,9 +353,7 @@ Downloading other types of files
 Your file is available at
 ``https://anaconda.org/<USERNAME>/<babynames>``
 
-Your file can also be downloaded by anyone using the Anaconda CLI:
-
-::
+Your file can also be downloaded by anyone using the Anaconda CLI::
 
         anaconda download USERNAME/baby-names
 
@@ -421,9 +371,7 @@ To remove a past version of one of your packages from Anaconda Cloud:
 
 #. Click the "Actions" menu and then "Remove".
 
-You may instead use the :doc:`command line interface <cli>`:
-
-::
+You may instead use the :doc:`command line interface <cli>`::
 
       anaconda remove jsmith/testpack/0.2
 
@@ -448,9 +396,7 @@ versions:
 
 #. Click "Delete".
 
-You may instead use the :doc:`command line interface <cli>`:
-
-::
+You may instead use the :doc:`command line interface <cli>`::
 
       anaconda remove jsmith/testpak
 
@@ -465,21 +411,15 @@ Notebooks
 =========
 
 Upload a `Jupyter notebook <http://jupyter.org/>`__ (formerly IPython
-notebook) to Anaconda Cloud:
-
-::
+notebook) to Anaconda Cloud::
 
     anaconda upload my-notebook.ipynb
 
-An HTML version of the notebook will be at:
-
-::
+An HTML version of the notebook will be at::
 
     http://notebooks.anaconda.org/<USERNAME>/my-notebook
 
-Anyone can download it:
-
-::
+Anyone can download it::
 
     anaconda download username/my-notebook
 
@@ -489,22 +429,16 @@ Environments
 
 Save a `conda
 environment <http://conda.pydata.org/docs/using/envs.html>`__ and upload
-it to Anaconda Cloud:
-
-::
+it to Anaconda Cloud::
 
     conda env export -n my-environment
     conda env upload my-environment
 
-A list of your uploaded environments is at:
-
-::
+A list of your uploaded environments is at::
 
     http://envs.anaconda.org/<USERNAME>
 
-Anyone can download and install your environment from Anaconda Cloud:
-
-::
+Anyone can download and install your environment from Anaconda Cloud::
 
     conda env create user/my-environemnt
     source activate my-environment
@@ -528,18 +462,14 @@ Managing organizations
 ~~~~~~~~~~~~~~~~~~~~~~
 
 You can view your organizations by navigating to your organizations
-dashboard:
-
-::
+dashboard::
 
     https://anaconda.org/organization/ORGANIZATION/dashboard
 
 Or by navigating to `anaconda.org <https://anaconda.org>`__ and
 selecting the organization dropdown on the upper right.
 
-You can manage your organization's settings by navigating to:
-
-::
+You can manage your organization's settings by navigating to::
 
     https://anaconda.org/organization/ORGANIZATION/settings/profile
 
@@ -554,9 +484,7 @@ All organization owners have full access to the organization settings
 and all packages.
 
 To give other users ownership, navigate to the groups settings page,
-choose "owners", type their names into the text box, and choose "add":
-
-::
+choose "owners", type their names into the text box, and choose "add"::
 
     https://anaconda.org/organization/ORGANIZATION/settings/groups
 
@@ -568,9 +496,7 @@ choose "owners", type their names into the text box, and choose "add":
 Uploading packages to an organization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To upload a package to an organization, use the ``-u/--user`` option:
-
-::
+To upload a package to an organization, use the ``-u/--user`` option::
 
     anaconda upload --user USERNAME package.tar.bz2
 
@@ -611,9 +537,7 @@ Now, upload your test package to Anaconda Cloud using the
 :ref:`anaconda-client upload <cli-upload>` command.
 
 Adding the ``--label`` option tells Anaconda Cloud to make the upload
-visible only to users who specify that label.
-
-::
+visible only to users who specify that label::
 
     anaconda upload /path/to/conda-package-2.0.tar.bz2 --label test
 
@@ -624,15 +548,11 @@ tell conda to look for your new ``test`` label.
 The ``--override`` argument tells conda not to use any channels in your
 ``~/.condarc`` file.
 
-No 2.0 results:
-
-::
+No 2.0 results::
 
     conda search --override -c USERNAME conda-package
 
-Your 2.0 package is here:
-
-::
+Your 2.0 package is here::
 
     conda search --override -c USERNAME/label/test conda-package
 
@@ -647,9 +567,7 @@ You can also manage your package labels from your dashboard:
 
     anaconda label --copy test main
 
-Now your version 2.0 is in main:
-
-::
+Now your version 2.0 is in main::
 
     conda search --override -c USERNAME conda-package
 
