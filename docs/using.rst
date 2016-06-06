@@ -461,10 +461,10 @@ select "Organizations", and use the form at the bottom of that page.
 Managing organizations
 ~~~~~~~~~~~~~~~~~~~~~~
 
-You can view your organizations by navigating to your organizations
-dashboard::
+You can view your organizations by navigating to "Group Membership" 
+which lists all of the organizations/groups to which you belong::
 
-    https://anaconda.org/organization/ORGANIZATION/dashboard
+    https://anaconda.org/<USERNAME>/groups
 
 Or by navigating to `anaconda.org <https://anaconda.org>`__ and
 selecting the organization dropdown on the upper right.
