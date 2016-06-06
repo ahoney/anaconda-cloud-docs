@@ -208,9 +208,7 @@ Show information about an object
 
 Show information about an object
 
-Examples:
-
-::
+Examples::
 
     anaconda show continuumio
     anaconda show continuumio/python
@@ -288,16 +286,12 @@ Enterprise <http://continuum.io/anaconda-server>`__.
 anaconda-client comes with two pre-configured sites ``alpha`` and
 ``binstar`` you may use these in one of two ways:
 
--  Invoke the anaconda command with the ``-s/--site`` option e.g. to use
-   the aplha testing site:
-
-   ::
+-  Invoke the anaconda command with the ``-s/--site`` option like this to use
+   the alpha testing site::
 
        anaconda -s alpha whoami
 
--  Set a site as the default:
-
-   ::
+-  Set a site as the default::
 
        anaconda config --set default_site alpha
        anaconda whoami
@@ -307,9 +301,7 @@ Add a anaconda-client site
 
 After installing `Anaconda
 Enterprise <http://continuum.io/anaconda-server>`__ you can add a site
-named **site\_name** like this:
-
-::
+named **site\_name** like this::
 
     anaconda config --set sites.site_name.url "http://<anaconda-enterprise-ip>:<port>/api"
     anaconda config --set default_site site_name
@@ -320,16 +312,12 @@ Site Options VS Global Options
 All options can be set as global options - affecting all sites, or site
 options - affecting only one site
 
-By default options are set gobaly e.g.:
-
-::
+By default options are set globally like this::
 
     anaconda config --set OPTION VALUE
 
 If you want the option to be limited to a single site, prefix the option
-with ``sites.site_name`` e.g.
-
-::
+with ``sites.site_name`` like this::
 
     anaconda config --set sites.site_name.OPTION VALUE
 
@@ -622,9 +610,7 @@ worker
 
 Anaconda Build command
 
-To get started with anaconda build run:
-
-::
+To get started with anaconda build run::
 
     anaconda build init  anaconda build submit .  
 
@@ -675,11 +661,11 @@ PATH
     The host name of the intended build worker
 
 `--dist DIST`
-    The os distribution of intended build worker (e.g centos, ubuntu)
+    The os distribution of intended build worker (such as centos, ubuntu)
     Use 'anaconda build queue' to view the workers
 
 `--platform PLATFORM`
-    The platform to run (e.g linux-64, win-64, osx-64, etc) (default:
+    The platform to run (such as linux-64, win-64, osx-64, and so on) (default:
     all the platforms in the .binstar.yaml file)
 
 | **build control:**
@@ -710,7 +696,6 @@ PATH
     If --tail or -f is given, then tail sub-builds in '--sub-builds '
     Otherwise with --tail or -f, tail -f all sub-builds
 
-| 
 
 Build command
 
@@ -721,7 +706,6 @@ See also:
 -  :ref:`submit-a-build`
 -  :ref:`Submit A Build From Github <github-builds>`
 
-| 
 
 .. _cli-save:
 
@@ -760,7 +744,6 @@ URL
     Anaconda Cloud usernames or email addresses to email when the build
     completes
 
-| 
 
 Save build info to be triggered later
 
@@ -768,7 +751,6 @@ See also:
 
 -  :ref:`save-and-trigger-builds`
 
-| 
 
 .. _cli-trigger:
 
@@ -805,11 +787,11 @@ USER/PACKAGE
     The host name of the intended build worker
 
 `--dist DIST`
-    The os distribution of intended build worker (e.g centos, ubuntu)
+    The os distribution of intended build worker (such as centos, ubuntu)
     Use 'anaconda build queue' to view the workers
 
 `--platform PLATFORM`
-    The platform to run (e.g linux-64, win-64, osx-64, etc) (default:
+    The platform to run (such as linux-64, win-64, osx-64, and so on) (default:
     all the platforms in the .binstar.yaml file)
 
 `--test-only / --no-upload`
@@ -826,7 +808,6 @@ USER/PACKAGE
     If --tail or -f is given, then tail sub-builds in '--sub-builds '
     Otherwise with --tail or -f, tail -f all sub-builds
 
-| 
 
 Trigger a build that has been saved
 
@@ -860,7 +841,6 @@ USERNAME/QUEUENAME
 `--remove-worker WORKER\_ID`
     Remove a worker from a queue
 
-| 
 
 worker
 ^^^^^^
@@ -886,23 +866,13 @@ register
 run
     Run a build worker to build jobs off of a binstar build queue
 
-| 
 
 Anaconda Build command
 
-To get started with anaconda worker run:
-
-::
+To get started with anaconda worker run::
 
     anaconda worker register USER/QUEUE -n NAME  anaconda worker run NAME  
 
 See also:
 
 -  :ref:`Anaconda Build <build-workers>`
-
-| 
-
-docker-worker
-^^^^^^^^^^^^^
-
-| 

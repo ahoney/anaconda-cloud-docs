@@ -21,9 +21,7 @@ of downloads by clicking the search results column heading.
 Download and install a package from Anaconda Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To install a conda package, in your terminal window run:
-
-::
+To install a conda package, in your terminal window run::
 
     conda install -c username packagename
 
@@ -39,9 +37,7 @@ to use their local installation.
 Download and install a PyPI package from Anaconda Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To install a PyPI package, in your terminal window run:
-
-::
+To install a PyPI package, in your terminal window run::
 
     pip install --index-url pypi.anaconda.org/USERNAME/simple packagename
 
@@ -69,45 +65,35 @@ Log into anaconda-client
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 After you have downloaded and configured anaconda-client, open a
-terminal window and run:
-
-::
+terminal window and run::
 
     anaconda login
 
 See a list of anaconda-client commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-From a terminal window, run:
-
-::
+From a terminal window, run::
 
     anaconda --help
 
 Find out more about an anaconda-client command
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-From a terminal window, run:
-
-::
+From a terminal window, run::
 
     anaconda COMMANDNAME -h
 
 See a list of all available anaconda-client configuration files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-From a terminal window, run:
-
-::
+From a terminal window, run::
 
     anaconda config --files
 
 See a list of all of my anaconda-client configuration variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-From a terminal window, run:
-
-::
+From a terminal window, run::
 
     anaconda config --show
 
@@ -131,18 +117,14 @@ section <quickstart-build-upload>`.
 Test a built package
 ^^^^^^^^^^^^^^^^^^^^
 
-Specify the '--use-local' option. For example:
-
-::
+Specify the '--use-local' option. For example::
 
     conda create --use-local -n test PACKAGENAME
 
 Upload a package to Anaconda Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In a terminal window, run:
-
-::
+In a terminal window, run::
 
     anaconda upload PACKAGENAME
 
@@ -151,9 +133,7 @@ Find help uploading packages
 
 For a complete list of upload options, including specifying a package's
 channel, label, availability to other users, and metadata, in a terminal
-window, run:
-
-::
+window, run::
 
     anaconda upload -h
 
