@@ -8,9 +8,13 @@ What is Anaconda Cloud?
 Anaconda Cloud is a package management service that makes it easy to
 find, access, store and share public and private notebooks,
 environments, and conda and PyPI packages, and to keep up with updates
-made to the packages and environments you're using.
+made to the packages and environments you're using. Anaconda Cloud is 
+Continuum Analytics' Anaconda repository made available to the public. 
+Anaconda repository is also available for purchase by companies that 
+wish to power their own internal private Anaconda Cloud. More info at 
+`Anaconda subscriptions <https://www.continuum.io/anaconda-subscriptions>`__.
 
-You can build packages using the Anaconda client command line interface
+You can build new packages using the Anaconda Client command line interface
 (CLI), then manually or automatically upload the packages to Anaconda
 Cloud to quickly share with others or access yourself from anywhere.
 
