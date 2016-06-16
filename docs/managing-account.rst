@@ -56,19 +56,23 @@ account. Go to `gravatar.com <http://gravatar.com>`__ to associate your
 email address or to change your Gravatar profile photo.
 
 While you're logged in, at the top right of each page in Anaconda Cloud,
-the user toolbar displays. |Anaconda Cloud user toolbar|
+the user toolbar displays. TODO - LINK IN IMAGE managing-toolbar-menu.png 
 
-From left to right, the user toolbar options are:
+The drop-down menu contains the following options:
 
-#. User Profile Settings label and button
-#. Add a package button
-#. Dashboard button. NOTE: When logged in, you can also click the
-   Anaconda Cloud logo to reach your Dashboard.
-#. User Settings button
-#. Log Out button
+#. Landscape - Your home page.
+#. View All - All packages, notebooks and environments you have created.
+#. Packages - Only packages you have created.
+#. Notebooks - Only notebooks you have created.
+#. Environments - Only environments you have created.
+#. Groups - If you are part of an organization, the groups you can access.
+#. Labels - Labels you have created, for example test or development. See 
+documentation for additional information.
+#. Build Queues - If you are part of an organization and build packages, 
+this is a list of queues you may access.
 
-Packages that you have created with this account appear on your
-Dashboard. There's a handy button to create a new package.
+Packages, notebooks and environments that you have created with this account 
+appear on your Dashboard. 
 
 See Also: :ref:`Working with Packages <using-packages>`
 
