@@ -56,7 +56,7 @@ account. Go to `gravatar.com <http://gravatar.com>`__ to associate your
 email address or to change your Gravatar profile photo.
 
 While you're logged in, at the top right of each page in Anaconda Cloud,
-the user toolbar displays. TODO - LINK IN IMAGE managing-toolbar-menu.png 
+the user toolbar displays. |Anaconda Cloud user toolbar|
 
 The drop-down menu contains the following options:
 
@@ -67,9 +67,9 @@ The drop-down menu contains the following options:
 #. Environments - Only environments you have created.
 #. Groups - If you are part of an organization, the groups you can access.
 #. Labels - Labels you have created, for example test or development. See 
-documentation for additional information.
+   documentation for additional information.
 #. Build Queues - If you are part of an organization and build packages, 
-this is a list of queues you may access.
+   this is a list of queues you may access.
 
 Packages, notebooks and environments that you have created with this account 
 appear on your Dashboard. 
@@ -306,4 +306,4 @@ In a paid plan, organizations can:
 See `our pricing <https://anaconda.org/about/pricing>`__ for details.
 
 .. |Anaconda Cloud home page| image:: /img/cloud-home.jpg
-.. |Anaconda Cloud user toolbar| image:: /img/cloud-user-toolbar.jpg
+.. |Anaconda Cloud user toolbar| image:: /img/managing-toolbar-menu.png
