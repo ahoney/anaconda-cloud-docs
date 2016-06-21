@@ -306,4 +306,4 @@ In a paid plan, organizations can:
 See `our pricing <https://anaconda.org/about/pricing>`__ for details.
 
 .. |Anaconda Cloud home page| image:: /img/cloud-home.png
-.. |Anaconda Cloud user toolbar| image:: /img/managing-toolbar-menu.png
+.. |Anaconda Cloud user toolbar| image:: /img/managing-toolbar-bar.png
