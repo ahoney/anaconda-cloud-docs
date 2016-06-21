@@ -71,6 +71,8 @@ The drop-down menu contains the following options:
 #. Build Queues - If you are part of an organization and build packages, 
    this is a list of queues you may access.
 
+|Anaconda Cloud toolbar menu|
+
 Packages, notebooks and environments that you have created with this account 
 appear on your Dashboard. 
 
@@ -307,3 +309,4 @@ See `our pricing <https://anaconda.org/about/pricing>`__ for details.
 
 .. |Anaconda Cloud home page| image:: /img/cloud-home.png
 .. |Anaconda Cloud user toolbar| image:: /img/managing-toolbar-bar.png
+.. |Anaconda Cloud toolbar menu| image:: /img/managing-toolbar-menu.png
