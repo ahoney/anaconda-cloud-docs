@@ -23,76 +23,7 @@ anaconda
 
 Anaconda Cloud command line manager
 
-**optional arguments:**
-
-`-h / --help`
-    show this help message and exit
-`-V / --version`
-    show program's version number and exit
-
-**output:**
-
-`--show-traceback`
-    Show the full traceback for chalmers user errors (default: tty)
-
-`--hide-traceback`
-    Hide the full traceback for chalmers user errors
-
-`--verbose / -v`
-    print debug information ot the console
-
-`--quiet / -q`
-    Only show warnings or errors the console
-
-`--color`
-    always display with colors
-
-`--no-color`
-    never display with colors
-
-**anaconda-client options:**
-
-`-t / --token TOKEN`
-    Authentication token to use. May be a token or a path to a file
-    containing a token
-`-s / --site SITE`
-    select the anaconda-client site to use
-
-**Commands:**
-
-auth
-    Manage Authorization Tokens
-channel
-    [DEPRECATED in favor of label] Manage your Anaconda Cloud channels
-config
-    Binstar configuration
-copy
-    Copy packages from one account to another
-download
-    Download notebooks from Anaconda Cloud
-groups
-    Manage Groups
-label
-    Manage your Anaconda Cloud labels
-login
-    Authenticate a user
-logout
-    Log out from Anaconda Cloud
-notebook
-    Interact with notebooks in anaconda.org
-package
-    Package utils
-remove
-    Remove an object from Anaconda Cloud
-search
-    Search Anaconda Cloud
-show
-    Show information about an object
-upload
-    Upload packages to Anaconda Cloud
-whoami
-    Print the information of the current user
-
+.. command-json-output:: anaconda --json-help
 
 Authentication
 ~~~~~~~~~~~~~~
@@ -100,56 +31,7 @@ Authentication
 auth
 ^^^^
 
-Manage Authorization Tokens
-
-**optional arguments:**
-
-`-h / --help`
-    show this help message and exit
-`-n / --name NAME`
-    A unique name so you can identify this token later. View your tokens
-    at anaconda.org/settings/access
-`-o / --org / --organization ORGANIZATION`
-    Set the token owner (must be an organization)
-
-**token creation arguments:**
-
-These arguments are only valid with the ``--create`` action
-
-`--strength STRENGTH`
-    Create a token with STRENGTH of "strong" or "weak"
-
-`--strong`
-    Create a longer token (default)
-
-`--weak / -w`
-    Create a shorter token
-
-`--url URL`
-    The url of the application that will use this token
-
-`--max-age MAX\_AGE`
-    The maximum age in seconds that this token will be valid for
-
-`--scopes / -s`
-    Scopes for token. For example if you want to limit this token to
-    conda downloads only you would use --scopes "repo conda:download"
-
-`--out OUT`
-    Output file
-
-**actions:**
-
-`-x / --list-scopes`
-    list all authentication scopes
-`-l / --list`
-    list all user authentication tokens
-`-r / --remove NAME`
-    remove authentication tokens
-`-c / --create`
-    Create an authentication token
-`-i / --info / --current-info`
-    Show information about the current authentication token
+.. command-json-output:: anaconda auth --json-help
 
 Manage Authentication tokens
 
@@ -163,30 +45,14 @@ login
 
 Authenticate a user
 
-**optional arguments:**
-
-`--help / -h`
-    show this help message and exit
-
-`--hostname HOSTNAME`
-    Specify the host name of this login, this should be unique
-    (default: ASUSN)
-
-`--username LOGIN\_USERNAME`
-    Specify your username. If this is not given, you will be prompted
-
-`--password LOGIN\_PASSWORD`
-    Specify your password. If this is not given, you will be prompted
+.. command-json-output:: anaconda login --json-help
 
 whoami
 ^^^^^^
 
 Print the information of the current user
 
-**optional arguments:**
-
-`-h / --help`
-    show this help message and exit
+.. command-json-output:: anaconda whoami --json-help
 
 Informational
 ~~~~~~~~~~~~~
@@ -196,15 +62,7 @@ show
 
 Show information about an object
 
-**positional arguments:**
-
- SPEC
-    Package written as USER[/PACKAGE[/VERSION[/FILE]]]
-
-**optional arguments:**
-
-`-h / --help`
-    show this help message and exit
+.. command-json-output:: anaconda show --json-help
 
 Show information about an object
 
@@ -220,17 +78,7 @@ search
 
 Search Anaconda Cloud
 
-**positional arguments:**
-
- NAME
-    Search string
-
-**optional arguments:**
-
-`-h / --help`
-    show this help message and exit
-`-t / --package-type PACKAGE\_TYPE`
-    only search for packages of this type
+.. command-json-output:: anaconda search --json-help
 
 Search Anaconda Cloud for packages
 
@@ -239,37 +87,7 @@ config
 
 Binstar configuration
 
-**optional arguments:**
-
-`--help / -h`
-    show this help message and exit
-
-`--type TYPE`
-    The type of the values in the set commands
-
-**actions:**
-
-`--set [u'name', u'value']`
-    sets a new variable: name value
-
-`--get name`
-    get value: name
-
-`--remove`
-    removes a variable
-
-`--show`
-    show all variables
-
-`--files / -f`
-    show the config file names
-
-**location:**
-
-`-u / --user`
-    set a variable for this user
-`-s / --site`
-    set a variable for all users on this machine
+.. command-json-output:: anaconda config --json-help
 
 anaconda-client configuration
 
@@ -348,44 +166,7 @@ package
 
 Anaconda Cloud package utilities
 
-**positional arguments:**
-
- USER/PACKAGE
-    Package to operate on
-
-**optional arguments:**
-
-`-h / --help`
-    show this help message and exit
-
-**actions:**
-
-`--add-collaborator user`
-    username of the collaborator you want to add
-`--list-collaborators`
-    list all of the collaborators in a package
-`--create`
-    Create a package
-
-**metadata arguments:**
-
-`--summary SUMMARY`
-    Set the package short summary
-
-`--license LICENSE`
-    Set the package license
-
-`--license-url LICENSE\_URL`
-    Set the package license url
-
-**privacy:**
-
-`--personal`
-    Set the package access to personal This package will be available
-    only on your personal registries
-`--private`
-    Set the package access to private This package will require
-    authorized and authenticated access to install
+.. command-json-output:: anaconda package --json-help
 
 
 .. _cli-upload:
@@ -395,68 +176,7 @@ upload
 
 Upload packages to Anaconda Cloud
 
-**positional arguments:**
-
- FILES
-    Distributions to upload
-
-**optional arguments:**
-
-`--help / -h`
-    show this help message and exit
-
-`--channel / -c CHANNELS`
-    [DEPRECATED] Add this file to a specific channel. Warning: if the
-    file channels do not include "main",the file will not show up in
-    your user channel
-
-`--label / -l`
-    Add this file to a specific label. Warning: if the file labels do
-    not include "main",the file will not show up in your user label
-
-`--no-progress`
-    Don't show upload progress
-
-`--user / -u USER`
-    User account, defaults to the current user
-
-`--no-register`
-    Don't create a new package namespace if it does not exist
-
-`--register`
-    Create a new package namespace if it does not exist
-
-`--build-id BUILD\_ID`
-    Anaconda Cloud Build ID (internal only)
-
-`--interactive / -i`
-    Run an interactive prompt if any packages are missing
-
-`--fail / -f`
-    Fail if a package or release does not exist (default)
-
-`--force`
-    Force a package upload regardless of errors
-
-**metadata options:**
-
-`--package / -p PACKAGE`
-    Defaults to the package name in the uploaded file
-
-`--version / -v VERSION`
-    Defaults to the package version in the uploaded file
-
-`--summary / -s SUMMARY`
-    Set the summary of the package
-
-`--package-type / -t PACKAGE\_TYPE`
-    Set the package type, defaults to autodetect
-
-`--description / -d DESCRIPTION`
-    description of the file(s)
-
-`--thumbnail THUMBNAIL`
-    Notebook's thumbnail image
+.. command-json-output:: anaconda upload --json-help
 
 ::
 
@@ -476,57 +196,14 @@ label
 
 Manage your Anaconda Cloud channels
 
-**optional arguments:**
-
-`--help / -h`
-    show this help message and exit
-
-`--organization / -o ORGANIZATION`
-    Manage an organizations labels
-
-`--copy LABEL LABEL`
-    Copy a label
-
-`--list`
-    list all labels for a user
-
-`--show LABEL`
-    Show all of the files in a label
-
-`--lock LABEL`
-    Lock a label
-
-`--unlock LABEL`
-    Unlock a label
-
-`--remove LABEL`
-    Remove a label
+.. command-json-output:: anaconda label --json-help
 
 copy
 ^^^^
 
 Copy packages from one account to another
 
-**positional arguments:**
-
- SPEC
-    Package - written as user/package/version[/filename] If filename is
-    not given, copy all files in the version
-
-**optional arguments:**
-
-`-h / --help`
-    show this help message and exit
-`--to-owner TO\_OWNER`
-    User account to copy package to (default: your account)
-`--from-channel FROM\_CHANNEL`
-    [DEPRECATED]Channel to copy packages from
-`--to-channel TO\_CHANNEL`
-    [DEPRECATED]Channel to put all packages into
-`--from-label FROM\_LABEL`
-    Label to copy packages from
-`--to-label TO\_LABEL`
-    Label to put all packages into
+.. command-json-output:: anaconda copy --json-help
 
 
 .. _cli-anaconda-build:
@@ -536,83 +213,13 @@ anaconda build
 
 Anaconda build client for continuous integration, testing and building packages
 
-| **optional arguments:**
-
-`-h / --help`
-    show this help message and exit
-`-V / --version`
-    show program's version number and exit
-
-| **output:**
-
-`--show-traceback`
-    Show the full traceback for chalmers user errors (default: tty)
-
-`--hide-traceback`
-    Hide the full traceback for chalmers user errors
-
-`-v / --verbose`
-    print debug information ot the console
-
-`-q / --quiet`
-    Only show warnings or errors the console
-
-`--color`
-    always display with colors
-
-`--no-color`
-    never display with colors
-
-| **anaconda-client options:**
-
-`-t / --token TOKEN`
-    Authentication token to use. May be a token or a path to a file
-    containing a token
-`-s / --site SITE`
-    select the anaconda-client site to use
-
-| **Commands:**
-
-backlog
-    Run a build worker to build jobs off of a anaconda build queue
-build
-    Anaconda build client for continuous integration, testing and
-    building packages
-init
-    Initialize Build file
-keyfile
-    [Advanced] Not documented yet
-keyfiles
-    [Advanced] Not documented yet
-list
-    list the builds for package
-list-all
-    list the builds for package
-queue
-    Inspect build queue
-resubmit
-    Resubmit build
-results
-    [Advanced] Attach results to build
-save
-    Save build info to be triggered later
-submit
-    Submit a directory or github repo for building
-tail
-    Tail the build output of build number X.Y
-trigger
-    Trigger a build that has been saved
-worker
-    Anaconda build client for continuous integration, testing and
-    building packages
-
-| 
+.. command-json-output:: anaconda-build --json-help
 
 Anaconda Build command
 
 To get started with anaconda build run::
 
-    anaconda build init  anaconda build submit .  
+    anaconda build init  anaconda build submit .
 
 See also:
 
@@ -630,71 +237,7 @@ submit
 
 Submit a directory or github repo for building
 
-| **positional arguments:**
-
-PATH
-    filepath or github url to submit
-
-| **optional arguments:**
-
-`-h / --help`
-    show this help message and exit
-
-`--git-url GIT\_URL`
-    The github url with valid .binstar.yml file to clone
-
-`-n / --dry-run`
-    Parse the build file but don't submit
-
-`--no-progress`
-    Don't show progress bar
-
-`--dont-git-ignore`
-    Don't ignore files from .gitignore
-
-`--queue QUEUE`
-    Build on this queue
-
-| **filters:**
-
-`--buildhost BUILDHOST`
-    The host name of the intended build worker
-
-`--dist DIST`
-    The os distribution of intended build worker (such as centos, ubuntu)
-    Use 'anaconda build queue' to view the workers
-
-`--platform PLATFORM`
-    The platform to run (such as linux-64, win-64, osx-64, and so on) (default:
-    all the platforms in the .binstar.yaml file)
-
-| **build control:**
-
-`--channel`
-    [DEPRECATED] Upload targets to this channel
-
-`--label`
-    Upload targets to this label
-
-`--test-only / --no-upload`
-    Don't upload the build targets to Anaconda Cloud, but run everything
-    else
-
-`-p / --package USER/PACKAGE`
-    The Anaconda Cloud package namespace to upload the build to
-
-`--sub-dir SUB\_DIR`
-    The sub directory within the git repository (github url submits
-    only)
-
-| **tail:**
-
-`--tail / -f`
-    Do 'tail -f on each sub-build log or each of the sub-builds given in
-    '--sub-builds'
-`--sub-builds / -s`
-    If --tail or -f is given, then tail sub-builds in '--sub-builds '
-    Otherwise with --tail or -f, tail -f all sub-builds
+.. command-json-output:: anaconda-build submit --json-help
 
 
 Build command
@@ -714,35 +257,7 @@ save
 
 Save build info to be triggered later
 
-| **positional arguments:**
-
-URL
-    The http github url to the repo
-
-| **optional arguments:**
-
-`-h / --help`
-    show this help message and exit
-
-`-p / --package USER/PACKAGE`
-    The Anaconda Cloud package namespace to upload the build to
-
-`--sub-dir SUB\_DIR`
-    The sub directory within the git repository (github url submits
-    only)
-
-`--channel`
-    [DEPRECATED] Upload targets to this channel
-
-`--label`
-    Upload targets to this label
-
-`--queue QUEUE`
-    Build on this queue
-
-`--email`
-    Anaconda Cloud usernames or email addresses to email when the build
-    completes
+.. command-json-output:: anaconda-build save --json-help
 
 
 Save build info to be triggered later
@@ -759,54 +274,7 @@ trigger
 
 Trigger a build that has been saved
 
-| **positional arguments:**
-
-USER/PACKAGE
-    The Anaconda Cloud package to trigger a build on
-
-| **optional arguments:**
-
-`-h / --help`
-    show this help message and exit
-
-`--channel`
-    [DEPRECATED] Upload targets to this channel
-
-`--label`
-    Upload targets to this label
-
-`--queue QUEUE`
-    Build on this queue
-
-`--branch BRANCH`
-    Branch to build
-
-| **filters:**
-
-`--buildhost BUILDHOST`
-    The host name of the intended build worker
-
-`--dist DIST`
-    The os distribution of intended build worker (such as centos, ubuntu)
-    Use 'anaconda build queue' to view the workers
-
-`--platform PLATFORM`
-    The platform to run (such as linux-64, win-64, osx-64, and so on) (default:
-    all the platforms in the .binstar.yaml file)
-
-`--test-only / --no-upload`
-    Don't upload the build targets to Anaconda Cloud, but run everything
-    else
-
-| **tail:**
-
-`--tail / -f`
-    Do 'tail -f on each sub-build log or each of the sub-builds given in
-    '--sub-builds'
-
-`--sub-builds / -s`
-    If --tail or -f is given, then tail sub-builds in '--sub-builds '
-    Otherwise with --tail or -f, tail -f all sub-builds
+.. command-json-output:: anaconda-build trigger --json-help
 
 
 Trigger a build that has been saved
@@ -825,53 +293,24 @@ queue
 
 Build Queue
 
-| **positional arguments:**
-
-USERNAME/QUEUENAME
-    Specify a queue to perform an operation on
-
-| **optional arguments:**
-
-`-h / --help`
-    show this help message and exit
-`-r / --remove`
-    Remove the queue specified with the -q/--queue option
-`-c / --create`
-    Create a new queue
-`--remove-worker WORKER\_ID`
-    Remove a worker from a queue
+.. command-json-output:: anaconda-build queue --json-help
 
 
 worker
 ^^^^^^
 
-None
+.. command-json-output:: anaconda-build worker --json-help
 
-| **optional arguments:**
+docker-worker
+^^^^^^
 
-`-h / --help`
-    show this help message and exit
-
-| **Commands:**
-
-deregister
-    Deregister a build worker to build jobs off of a binstar build queue
-docker_run
-    Run a build worker in a docker container to build jobs off of a
-    binstar build queue
-list
-    List build workers and queues
-register
-    Register a build worker to build jobs off of a binstar build queue
-run
-    Run a build worker to build jobs off of a binstar build queue
-
+.. command-json-output:: anaconda-build docker-worker --json-help
 
 Anaconda Build command
 
 To get started with anaconda worker run::
 
-    anaconda worker register USER/QUEUE -n NAME  anaconda worker run NAME  
+    anaconda worker register USER/QUEUE -n NAME  anaconda worker run NAME
 
 See also:
 
